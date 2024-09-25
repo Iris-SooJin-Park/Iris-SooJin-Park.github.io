@@ -1,6 +1,7 @@
 ---
 title: "Business Analytics II"
 collection: teaching
+position: "Teaching Assistant"
 type: "Undergraduate course (2021-2024 Spring)"
 #permalink: /teaching/2014-spring-teaching-1
 venue: "University of Wisconsin-Madison"

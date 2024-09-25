@@ -16,6 +16,7 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src="{{ teaser }}" alt="{{ post.title }}">
@@ -26,20 +27,27 @@
       {{ title }}
     </h2>
 
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    <!-- Display position above the course type -->
+    {% if post.position %}
+      <p class="archive__item-position">{{ post.position }}</p>
     {% endif %}
 
     {% if post.collection == 'teaching' %}
       <p>
-        {{ post.type }}<br>
-        <i>{{ post.venue }}</i>
+        {{ post.type }}<br> <!-- Display course type -->
+        <i>{{ post.venue }}</i> <!-- Display university venue -->
         {% if post.date %}
-          , {{ post.date | date: "%Y" }}
+          , {{ post.date | date: "%Y" }} <!-- Optionally display year if available -->
         {% endif %}
       </p>
     {% endif %}
-
+    
+    <!-- Display read time if available -->
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+    
+    <!-- Display excerpt -->
     {% if post.excerpt and site.read_more != 'enabled' %}
       <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
@@ -48,6 +56,7 @@
       </p>
     {% endif %}
     
+    <!-- Display recommended citation and paper/slides download links if available -->
     {% if post.citation and post.paperurl and post.slidesurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.citation and post.paperurl %}
@@ -59,9 +68,11 @@
     {% elsif post.paperurl %}
       <p><a href=" {{ post.paperurl }} ">Download Paper</a></p>
     {% elsif post.slidesurl %}
-      <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
+      <p>Download <a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% endif %}
+
   </article>
 </div>
+
 
 
