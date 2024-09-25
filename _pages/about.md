@@ -14,4 +14,3 @@ My research focuses on applied topics in insurance and public economics, with a 
 
 Before joining the risk and insurance department, I earned undergraduate degrees in economics and mathematics from the University of Wisconsin-Madison in May 2021, graduating with honors.
 
-[google4f050e4dd6b3496c.html](https://Iris-SooJin-Park.github.io/files/google4f050e4dd6b3496c.html)
