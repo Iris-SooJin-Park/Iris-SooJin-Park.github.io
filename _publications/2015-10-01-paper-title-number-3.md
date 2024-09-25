@@ -2,7 +2,7 @@
 title: "Older Americans and Life Insurance: Rationalizing Demand and Understanding Payout Utilization Among Surviving Spouses"
 collection: publications
 category: manuscripts
-permalink: /publication/2015-10-01-paper-title-number-3
+#permalink: /publication/2015-10-01-paper-title-number-3
 excerpt: 'with [Tyler Welch](https://www.tqwelch.com/home)'
 #date: 2015-10-01
 #venue: 'Journal 1'
