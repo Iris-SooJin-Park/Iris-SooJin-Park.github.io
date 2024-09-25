@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download my PDF](https://files/files/Iris_SooJin_Park_CV.pdf)
+[Download my CV](https://files/Iris_SooJin_Park_CV.pdf)
 
 <!-- 
 Education
