@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course (2021-2024 Spring)"
 #permalink: /teaching/2014-spring-teaching-1
 venue: "University of Wisconsin-Madison"
-date: 2014-01-01
+#date: 2014-01-01
 location: "Madison, WI"
 ---
 
