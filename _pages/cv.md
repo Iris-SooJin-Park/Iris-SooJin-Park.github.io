@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Here is my CV https://files/Iris SooJin Park_CV.pdf
+Here is my CV https://files/files/Iris_SooJin_Park_CV.pdf
 
 <!-- 
 Education
