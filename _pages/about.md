@@ -6,8 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a PhD candidate in the [Department of Risk and Insurance](https://business.wisc.edu/faculty-research/risk-insurance/) at the [University of Wisconsin-Madison's Wisconsin School of Business](https://business.wisc.edu/), with an expected graduation in 2026.
+I am a PhD candidate in the [Department of Risk and Insurance](https://business.wisc.edu/faculty-research/risk-insurance/) at the University of Wisconsin-Madison's Wisconsin School of Business, with an expected graduation in 2026.
 
 My research focuses on applied topics in insurance and public economics, with a particular emphasis on health insurance, behavioral and experimental economics, household finance, and public policy.
 
-Before starting my graduate studies at UW-Madison, I graduated with honors in economics and mathematics from the University of Wisconsin-Madison in May 2021.
+Before joining the risk and insurance department, I earned undergraduate degrees in economics and mathematics from the University of Wisconsin-Madison in May 2021, graduating with honors.
+
