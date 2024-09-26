@@ -35,16 +35,16 @@
     h2, h3, h4, h5, h6 {
       margin-bottom: 0;
       font-family: $sans-serif-narrow;
-      font-size: 20px; /* Adjust heading font size in the sidebar */
+      font-size: 26px; /* Increase heading font size in the sidebar */
     }
   
     h3, h4 {
-      font-size: 18px; /* Adjust font size for h3 and h4 if needed */
+      font-size: 24px; /* Further increase font size for h3 and h4 */
     }
   
     p, li {
       font-family: $sans-serif;
-      font-size: 16px; /* Increase general font size in the sidebar */
+      font-size: 20px; /* Increase general text font size in the sidebar */
       line-height: 1.5;
     }
   
@@ -77,8 +77,6 @@
     display: table-cell;
     vertical-align: top;
     width: 36px;
-    // set width only, for non-square avatars
-    // height: 36px;
   
     @include breakpoint($large) {
       display: block;
@@ -123,7 +121,7 @@
   
   .sidebar .author__name {
     font-family: $sans-serif;
-    font-size: 22px; /* Increase font size of the author's name */
+    font-size: 28px; /* Significantly increase font size of the author's name */
   }
   
   .sidebar .author__desktop {
@@ -153,7 +151,7 @@
   
   .sidebar .author__bio {
     font-family: $sans-serif;
-    font-size: 18px; /* Increase font size of the bio */
+    font-size: 22px; /* Significantly increase font size of the bio */
   }
   
   .author__urls-wrapper {
@@ -253,7 +251,7 @@
       padding-top: 2px;
       padding-bottom: 2px;
       color: inherit;
-      font-size: 16px; /* Increase font size of the author links */
+      font-size: 20px; /* Significantly increase font size of the author links */
       text-decoration: none;
   
       &:hover {
