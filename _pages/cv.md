@@ -1,8 +1,9 @@
 ---
 layout: archive
-title: "CV"
+title: "Iris SooJin Park"
 permalink: /cv/
 author_profile: true
+description: "PhD Candidate at the Wisconsin School of Business. My research focuses on topics in insurance and applied economics."
 redirect_from:
   - /resume
 ---
