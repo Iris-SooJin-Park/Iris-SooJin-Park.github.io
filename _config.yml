@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Iris SooJin Park/ PhD Candidate"
+title                    : "Iris SooJin Park"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
@@ -24,8 +24,8 @@ author:
   #avatar           : "profile.png"
   name             : "Iris Park"
   pronouns         : "she/her"  
-  bio              : '<a href="https://business.wisc.edu/faculty-research/risk-insurance/" target="_blank">Department of Risk and Insurance</a>'
-  employer         : '<a href="https://www.wisc.edu/" target="_blank">University of Wisconsin-Madison</a>'
+  bio              : "PhD Candidate, Wisconsin School of Business"
+  employer         : '<a href="https://www.wisc.edu/" target="_blank">UW-Madison</a>'
   uri              : # URL
   email            : "park487@wisc.edu" 
   linkedin         : "iris-soojin-park-8762a7153/"
