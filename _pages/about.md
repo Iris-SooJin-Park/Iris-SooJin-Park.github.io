@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-![Alt text](images/profile.png)
+![Alt text](images/black_top_final.jpeg)
 
 I am a PhD candidate in the [Department of Risk and Insurance](https://business.wisc.edu/faculty-research/risk-insurance/) at the University of Wisconsin-Madison's Wisconsin School of Business, with an expected graduation in 2026.
 
