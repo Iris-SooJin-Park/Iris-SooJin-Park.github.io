@@ -7,9 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-<div style="text-align: center;">
-  <img src="images/black_top_final.jpeg" alt="Alt text" style="width:70%;">
-</div>
+<img src="images/black_top_final.jpeg" alt="Alt text" style="width:50%; margin-bottom: 20px;">
 
 I am a PhD candidate in the [Department of Risk and Insurance](https://business.wisc.edu/faculty-research/risk-insurance/) at the University of Wisconsin-Madison's Wisconsin School of Business, with an expected graduation in 2026.
 
