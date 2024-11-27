@@ -1,5 +1,5 @@
 ---
-title: "The Impact of an Visual Decision Aid on HDHP Enrollment and Subsequent Healthcare Access in a State Group Health Insurance Program"
+title: "When the Choice Should Be Clear: Visual Decision Aids and Health Insurance Selection"
 collection: publications
 category: manuscripts
 #permalink: /publication/2010-10-01-paper-title-number-2

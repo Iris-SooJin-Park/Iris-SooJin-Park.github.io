@@ -1,9 +1,9 @@
 ---
-#title: "Older Americans and Life Insurance"
-#collection: publications
-#category: manuscripts
-#permalink: /publication/2015-10-01-paper-title-number-3
-#excerpt: 'with [Tyler Welch](https://www.tqwelch.com/home)'
+title: "Older Americans and Life Insurance"
+collection: publications
+category: manuscripts
+permalink: /publication/2024-11-26-Older-Americans-and-Life-Insurance
+excerpt: 'with [Tyler Welch](https://www.tqwelch.com/home)'
 #date: 2015-10-01
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
