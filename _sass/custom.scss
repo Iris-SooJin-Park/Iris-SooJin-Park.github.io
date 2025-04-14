@@ -1,0 +1,10 @@
+/* Make publication titles black */
+.archive__item-title a {
+  color: black;
+  text-decoration: none;
+}
+
+.archive__item-title a:hover {
+  color: black;
+  text-decoration: underline; /* optional */
+}
