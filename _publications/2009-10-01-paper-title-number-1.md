@@ -1,5 +1,5 @@
 ---
-title: "The Impact of Increase in Deductible on Health Care Utilization"
+title: "What Does a Modest Deductible Do: The Impact of Higher Deductibles on Health Care Utilization in a Stable Insurance Program"
 collection: publications
 category: manuscripts
 #permalink: /publication/2009-10-01-paper-title-number-1
