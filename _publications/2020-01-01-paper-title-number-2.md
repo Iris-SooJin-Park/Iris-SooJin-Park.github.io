@@ -3,7 +3,7 @@ title: "The Impact of Decision Aids on Health Insurance Selection"
 collection: publications
 category: manuscripts
 #permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'with [Justin Sydnor](https://sites.google.com/a/wisc.edu/jrsydnor/) and [Anya Samek](https://rady.ucsd.edu/faculty-research/faculty/anya-samek.html)'
+abstract: "with [Justin Sydnor](https://sites.google.com/a/wisc.edu/jrsydnor/) and [Anya Samek](https://rady.ucsd.edu/faculty-research/faculty/anya-samek.html)"
 #date: 2010-10-01
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
