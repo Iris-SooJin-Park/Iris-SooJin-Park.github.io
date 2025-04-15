@@ -38,11 +38,18 @@ layout: default
         
         {% if page.collection == 'teaching' %}
         <p>
-          {{ page.type }}
-          {% if page.venue %}, <i>{{ page.venue }}</i>{% endif %}
-          {% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}
+          {% if page.type %}{{ page.type }}{% endif %}
+          {% if page.venue %}
+            {% if page.type %}, {% endif %}
+            <i>{{ page.venue }}</i>
+          {% endif %}
+          {% if page.date %}
+            {% if page.type or page.venue %}, {% endif %}
+            {{ page.date | date: "%Y" }}
+          {% endif %}
         </p>
       {% endif %}
+      
       
 
       <section class="page__content" itemprop="text">
