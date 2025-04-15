@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "A little about me"
+title: "Iris SooJin Park"
 author_profile: true
 redirect_from: 
   - /about/
