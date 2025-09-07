@@ -1,5 +1,5 @@
 ---
-title: " Optimal Health Insurance Design with Behavioral Hazard: When the First Dollar Matters"
+title: " Modeling Insurance Choice with Behavioral Frictions: Structural Simulations and Empirical Evidence"
 collection: publications
 category: manuscripts
 #permalink: /publication/2009-10-01-paper-title-number-1
