@@ -2,6 +2,7 @@
 title: "Endogenous spending and labor supply response to health shocks"
 collection: publications
 category: manuscripts
+no_link: true
 #permalink: /publication/2024-11-26-Older-Americans-and-Life-Insurance
 abstract: "with [Laura Waring](https://sites.google.com/view/laurawaring/home)"
 #date: 2015-10-01
