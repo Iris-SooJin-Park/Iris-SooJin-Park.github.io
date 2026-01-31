@@ -22,7 +22,11 @@
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
-      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% if post.no_link %}
+        {{ title }}
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
     </h2>
 
     {% if post.abstract %}
@@ -44,21 +48,34 @@
     {% endif %}
 
     {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+      <p class="page__meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        {% include read-time.html %}
+      </p>
     {% endif %}
 
     {% if post.citation and post.paperurl and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
+      <p>
+        Recommended citation: {{ post.citation }}<br />
+        <a href="{{ post.paperurl }}">Download Paper</a> |
+        <a href="{{ post.slidesurl }}">Download Slides</a>
+      </p>
     {% elsif post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a></p>
+      <p>
+        Recommended citation: {{ post.citation }}<br />
+        <a href="{{ post.paperurl }}">Download Paper</a>
+      </p>
     {% elsif post.citation and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
+      <p>
+        Recommended citation: {{ post.citation }}<br />
+        <a href="{{ post.slidesurl }}">Download Slides</a>
+      </p>
     {% elsif post.citation %}
       <p>Recommended citation: {{ post.citation }}</p>
     {% elsif post.paperurl %}
       <p><a href="{{ post.paperurl }}">Download Paper</a></p>
     {% elsif post.slidesurl %}
-      <p>Download <a href="{{ post.slidesurl }}">Download Slides</a></p>
+      <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% endif %}
 
   </article>
