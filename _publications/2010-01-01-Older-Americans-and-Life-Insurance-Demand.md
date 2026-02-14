@@ -1,7 +1,7 @@
 ---
 title: "Older Americans and Life Insurance Demand"
 collection: publications
-category: manuscripts
+category: work_in_progress
 permalink: /publication/2024-11-26-Older-Americans-and-Life-Insurance-Demand
 abstract: "with [Tyler Welch](https://www.tqwelch.com/home)"
 #date: 2015-10-01
