@@ -1,17 +1,13 @@
-/* Publication titles */
+/* Publication titles: never underline (and prevent border-bottom “fake underline”) */
 .archive__item-title a {
   color: #333 !important;
   text-decoration: none !important;
+  border-bottom: 0 !important;
 }
 
-.archive__item-title a:hover {
+.archive__item-title a:hover,
+.archive__item-title a:focus {
   color: #333 !important;
   text-decoration: none !important;
-}
-
-/* Section headers (e.g., Working Papers / Work in Progress) */
-.page__content h2,
-.page__content h3 {
-  border-bottom: none !important;
-  text-decoration: none !important;
+  border-bottom: 0 !important;
 }
