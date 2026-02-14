@@ -1,10 +1,17 @@
-/* Make publication titles black */
+/* Publication titles */
 .archive__item-title a {
-  color: #333	 !important;
-  text-decoration: none;
+  color: #333 !important;
+  text-decoration: none !important;
 }
 
 .archive__item-title a:hover {
-  color: #333	 !important;
-  text-decoration: underline; /* or keep none if you prefer */
+  color: #333 !important;
+  text-decoration: none !important;
+}
+
+/* Section headers (e.g., Working Papers / Work in Progress) */
+.page__content h2,
+.page__content h3 {
+  border-bottom: none !important;
+  text-decoration: none !important;
 }
