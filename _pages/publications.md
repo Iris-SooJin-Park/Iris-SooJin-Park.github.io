@@ -8,6 +8,8 @@ author_profile: true
 <h3>
   {% if post.no_link %}
     {{ post.title }}
+  {% elsif post.paperurl %}
+    <a href="{{ post.paperurl }}">{{ post.title }}</a>
   {% else %}
     <a href="{{ post.url }}">{{ post.title }}</a>
   {% endif %}
