@@ -54,28 +54,39 @@
       </p>
     {% endif %}
 
-    {% if post.citation and post.paperurl and post.slidesurl %}
+    {% if post.citation %}
       <p>
         Recommended citation: {{ post.citation }}<br />
-        <a href="{{ post.paperurl }}">Download Paper</a> |
-        <a href="{{ post.slidesurl }}">Download Slides</a>
+        {% assign sep = "" %}
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}">Download Paper</a>
+          {% assign sep = " | " %}
+        {% endif %}
+        {% if post.ssrnurl %}
+          {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
+          {% assign sep = " | " %}
+        {% endif %}
+        {% if post.slidesurl %}
+          {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
+        {% endif %}
       </p>
-    {% elsif post.citation and post.paperurl %}
-      <p>
-        Recommended citation: {{ post.citation }}<br />
-        <a href="{{ post.paperurl }}">Download Paper</a>
-      </p>
-    {% elsif post.citation and post.slidesurl %}
-      <p>
-        Recommended citation: {{ post.citation }}<br />
-        <a href="{{ post.slidesurl }}">Download Slides</a>
-      </p>
-    {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }}</p>
-    {% elsif post.paperurl %}
-      <p><a href="{{ post.paperurl }}">Download Paper</a></p>
-    {% elsif post.slidesurl %}
-      <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% else %}
+      {% if post.paperurl or post.ssrnurl or post.slidesurl %}
+        <p>
+          {% assign sep = "" %}
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl }}">Download Paper</a>
+            {% assign sep = " | " %}
+          {% endif %}
+          {% if post.ssrnurl %}
+            {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
+            {% assign sep = " | " %}
+          {% endif %}
+          {% if post.slidesurl %}
+            {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
+          {% endif %}
+        </p>
+      {% endif %}
     {% endif %}
 
   </article>
