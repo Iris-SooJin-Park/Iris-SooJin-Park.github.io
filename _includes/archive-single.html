@@ -17,7 +17,7 @@
 
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src="{{ teaser }}" alt="{{ post.title }}">
+        <img src="{{ teaser | relative_url }}" alt="{{ post.title }}">
       </div>
     {% endif %}
 
@@ -94,6 +94,12 @@
     {% if post.content != "" %}
       <div class="archive__item-excerpt" style="margin-top: 8px;">
         {{ post.content | markdownify }}
+      </div>
+    {% endif %}
+
+    {% if post.image %}
+      <div class="archive__item-image" style="margin-top: 14px;">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto;">
       </div>
     {% endif %}
 
