@@ -89,5 +89,11 @@
       {% endif %}
     {% endif %}
 
+    {% if post.award %}
+      <p class="archive__item-award" style="margin-top: 6px; color: #666;">
+        🏆 {{ post.award }}
+      </p>
+    {% endif %}
+
   </article>
 </div>

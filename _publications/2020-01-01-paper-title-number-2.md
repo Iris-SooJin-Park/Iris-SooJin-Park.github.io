@@ -4,6 +4,7 @@ collection: publications
 category: working_papers
 #permalink: /publication/2010-10-01-paper-title-number-2
 abstract: "with [Justin Sydnor](https://sites.google.com/a/wisc.edu/jrsydnor/) and [Anya Samek](https://rady.ucsd.edu/faculty-research/faculty/anya-samek.html)"
+award: "The Rising Financial Literacy Scholar Award, 2026 Stanford Financial Education Symposium"
 #date: 2010-10-01
 #venue: 'Journal 1'
 #slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
