@@ -2,6 +2,7 @@
 title: "The Generosity Paradox: When Less Generous Insurance Raises Spending"
 collection: publications
 category: working_papers
+image: /images/ded_sweep_multicontract_lam6490_sd4890.pdf
 # permalink: /publication/2015-01-15-To Smooth or Not to Smooth: Consumption Responses to Life Insurance Payouts
 # abstract: "with [Tyler Welch](https://www.tqwelch.com/home)"
 #date: 2015--01
