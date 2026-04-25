@@ -11,3 +11,12 @@
   text-decoration: none !important;
   border-bottom: 0 !important;
 }
+
+/* Wider layout only for Research page */
+.layout--archive.wide .page {
+  width: 100%;
+}
+
+.layout--archive.wide .page__inner-wrap {
+  max-width: 1150px;
+}
