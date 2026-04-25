@@ -22,11 +22,7 @@
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
-      {% if post.no_link %}
-        {{ title }}
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
+      {{ title }}
     </h2>
 
     {% if post.abstract %}
@@ -90,9 +86,15 @@
     {% endif %}
 
     {% if post.award %}
-      <p class="archive__item-award" style="margin-top: 6px; color: #666;">
+      <p class="archive__item-award" style="margin-top: 6px; color: #000;">
         🏆 {{ post.award }}
       </p>
+    {% endif %}
+
+    {% if post.content != "" %}
+      <div class="archive__item-excerpt" style="margin-top: 8px;">
+        {{ post.content | markdownify }}
+      </div>
     {% endif %}
 
   </article>
