@@ -1,10 +1,11 @@
 ---
 title: "Research"
 permalink: /research/
+layout: archive
 author_profile: false
 ---
 
-# Research
+{% include base_path %}
 
 ## Working Papers
 
