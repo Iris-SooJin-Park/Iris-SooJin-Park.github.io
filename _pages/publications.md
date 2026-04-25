@@ -8,32 +8,43 @@ author_profile: false
 <style>
 .page {
   width: 100% !important;
-  max-width: 1200px !important;
+  max-width: 1450px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
 .page__inner-wrap {
-  max-width: 1200px !important;
+  max-width: 1450px !important;
 }
 
 .archive {
   width: 100% !important;
-  max-width: 1200px !important;
+  max-width: 1450px !important;
   float: none !important;
 }
 
 .research-item {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
-  align-items: start;
-  margin-bottom: 60px;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 65px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.research-text {
+  max-width: 560px;
+}
+
+.research-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .research-image img {
   width: 100%;
+  max-width: 650px;
   height: auto;
   display: block;
 }
