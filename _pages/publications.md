@@ -26,14 +26,14 @@ author_profile: false
 
 .research-item {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: 1.15fr 1.15fr;
   gap: 65px;
   align-items: center;
   margin-bottom: 90px;
 }
 
 .research-text {
-  max-width: 560px;
+  max-width: 800px;
 }
 
 .research-image {
