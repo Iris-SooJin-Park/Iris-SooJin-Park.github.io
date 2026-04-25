@@ -23,6 +23,30 @@ author_profile: false
   max-width: 1200px !important;
   float: none !important;
 }
+
+.research-item {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.research-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .research-item {
+    display: block;
+  }
+
+  .research-image {
+    margin-top: 16px;
+  }
+}
 </style>
 
 {% include base_path %}

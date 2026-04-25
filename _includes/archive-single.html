@@ -1,11 +1,5 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
 {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
@@ -13,60 +7,32 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item research-item" itemscope itemtype="http://schema.org/CreativeWork">
 
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src="{{ teaser | relative_url }}" alt="{{ post.title }}">
-      </div>
-    {% endif %}
+    <div class="research-text">
 
-    <h2 class="archive__item-title" itemprop="headline">
-      {{ title }}
-    </h2>
+      <h2 class="archive__item-title" itemprop="headline">
+        {{ title }}
+      </h2>
 
-    {% if post.abstract %}
-      <p class="archive__item-coauthors"><em>{{ post.abstract | markdownify }}</em></p>
-    {% endif %}
+      {% if post.abstract %}
+        <p class="archive__item-coauthors"><em>{{ post.abstract | markdownify }}</em></p>
+      {% endif %}
 
-    {% if post.position %}
-      <p class="archive__item-position">{{ post.position }}</p>
-    {% endif %}
+      {% if post.position %}
+        <p class="archive__item-position">{{ post.position }}</p>
+      {% endif %}
 
-    {% if post.collection == 'teaching' %}
-      <p>
-        {{ post.type }}<br>
-        <i>{{ post.venue }}</i>
-        {% if post.date %}
-          , {{ post.date | date: "%Y" }}
-        {% endif %}
-      </p>
-    {% endif %}
+      {% if post.collection == 'teaching' %}
+        <p>
+          {{ post.type }}<br>
+          <i>{{ post.venue }}</i>
+          {% if post.date %}
+            , {{ post.date | date: "%Y" }}
+          {% endif %}
+        </p>
+      {% endif %}
 
-    {% if post.read_time %}
-      <p class="page__meta">
-        <i class="fa fa-clock-o" aria-hidden="true"></i>
-        {% include read-time.html %}
-      </p>
-    {% endif %}
-
-    {% if post.citation %}
-      <p>
-        Recommended citation: {{ post.citation }}<br />
-        {% assign sep = "" %}
-        {% if post.paperurl %}
-          <a href="{{ post.paperurl }}">Download Paper</a>
-          {% assign sep = " | " %}
-        {% endif %}
-        {% if post.ssrnurl %}
-          {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
-          {% assign sep = " | " %}
-        {% endif %}
-        {% if post.slidesurl %}
-          {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
-        {% endif %}
-      </p>
-    {% else %}
       {% if post.paperurl or post.ssrnurl or post.slidesurl %}
         <p>
           {% assign sep = "" %}
@@ -83,23 +49,24 @@
           {% endif %}
         </p>
       {% endif %}
-    {% endif %}
 
-    {% if post.award %}
-      <p class="archive__item-award" style="margin-top: 6px; color: #000;">
-        🏆 {{ post.award }}
-      </p>
-    {% endif %}
+      {% if post.award %}
+        <p class="archive__item-award" style="margin-top: 6px; color: #000;">
+          🏆 {{ post.award }}
+        </p>
+      {% endif %}
 
-    {% if post.content != "" %}
-      <div class="archive__item-excerpt" style="margin-top: 8px;">
-        {{ post.content | markdownify }}
-      </div>
-    {% endif %}
+      {% if post.content != "" %}
+        <div class="archive__item-excerpt" style="margin-top: 8px;">
+          {{ post.content | markdownify }}
+        </div>
+      {% endif %}
+
+    </div>
 
     {% if post.image %}
-      <div class="archive__item-image" style="margin-top: 14px;">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto;">
+      <div class="research-image">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
       </div>
     {% endif %}
 
