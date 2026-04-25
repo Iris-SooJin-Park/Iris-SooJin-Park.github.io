@@ -13,10 +13,18 @@
 }
 
 /* Wider layout only for Research page */
-.layout--archive.wide .page {
-  width: 100%;
+.research-wide .page {
+  width: 100% !important;
+  max-width: 1200px !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-.layout--archive.wide .page__inner-wrap {
-  max-width: 1150px;
+.research-wide .page__inner-wrap {
+  max-width: 1200px !important;
+}
+
+.research-wide .archive {
+  width: 100% !important;
 }

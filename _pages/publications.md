@@ -3,7 +3,7 @@ title: "Research"
 permalink: /research/
 layout: archive
 author_profile: false
-classes: wide
+classes: research-wide
 ---
 
 {% include base_path %}
