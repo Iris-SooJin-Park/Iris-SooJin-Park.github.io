@@ -3,8 +3,27 @@ title: "Research"
 permalink: /research/
 layout: archive
 author_profile: false
-classes: research-wide
 ---
+
+<style>
+.page {
+  width: 100% !important;
+  max-width: 1200px !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.page__inner-wrap {
+  max-width: 1200px !important;
+}
+
+.archive {
+  width: 100% !important;
+  max-width: 1200px !important;
+  float: none !important;
+}
+</style>
 
 {% include base_path %}
 

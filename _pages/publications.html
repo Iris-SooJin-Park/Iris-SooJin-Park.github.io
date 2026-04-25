@@ -6,15 +6,38 @@ author_profile: false
 classes: research-wide
 ---
 
+<style>
+.page {
+  width: 100% !important;
+  max-width: 1200px !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.page__inner-wrap {
+  max-width: 1200px !important;
+}
+
+.archive {
+  width: 100% !important;
+  max-width: 1200px !important;
+  float: none !important;
+}
+</style>
+
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">
+    You can also find my articles on 
+    <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.
+  </div>
 {% endif %}
 
 {% include base_path %}
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
       {% if post.category != category[0] %}
@@ -32,6 +55,3 @@ classes: research-wide
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
-
-
