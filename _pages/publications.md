@@ -4,8 +4,82 @@ permalink: /research/
 layout: archive
 author_profile: false
 ---
-
 <style>
+.page,
+.page__inner-wrap,
+.archive {
+  width: 100% !important;
+  max-width: 1500px !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.list__item,
+.archive__item {
+  width: 100% !important;
+  max-width: 1500px !important;
+  float: none !important;
+  clear: both !important;
+}
+
+.research-item {
+  display: grid !important;
+  grid-template-columns: minmax(650px, 1fr) minmax(520px, 650px);
+  column-gap: 80px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.research-text {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.archive__item-title {
+  white-space: nowrap;
+}
+
+.archive__item-coauthors,
+.archive__item-award {
+  white-space: nowrap;
+}
+
+.archive__item-excerpt {
+  max-width: 720px;
+  line-height: 1.55;
+}
+
+.research-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.research-image img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .research-item {
+    display: block !important;
+  }
+
+  .archive__item-title,
+  .archive__item-coauthors,
+  .archive__item-award {
+    white-space: normal;
+  }
+
+  .research-image {
+    margin-top: 18px;
+    justify-content: center;
+  }
+}
+</style>
 .page {
   width: 100% !important;
   max-width: 1550px !important;

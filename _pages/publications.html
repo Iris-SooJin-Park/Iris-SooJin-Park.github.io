@@ -6,36 +6,49 @@ author_profile: false
 classes: research-wide
 ---
 <style>
-.page {
+.page,
+.page__inner-wrap,
+.archive {
   width: 100% !important;
-  max-width: 1550px !important;
+  max-width: 1500px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 40px !important;
-  padding-right: 40px !important;
 }
 
-.page__inner-wrap {
-  max-width: 1550px !important;
-}
-
-.archive {
+.list__item,
+.archive__item {
   width: 100% !important;
-  max-width: 1550px !important;
+  max-width: 1500px !important;
   float: none !important;
+  clear: both !important;
 }
 
 .research-item {
-  display: grid;
-  grid-template-columns: 1.1fr 1.2fr;
-  gap: 90px;
+  display: grid !important;
+  grid-template-columns: minmax(650px, 1fr) minmax(520px, 650px);
+  column-gap: 80px;
   align-items: center;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 }
 
 .research-text {
-  max-width: 700px;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.archive__item-title {
+  white-space: nowrap;
+}
+
+.archive__item-coauthors,
+.archive__item-award {
+  white-space: nowrap;
+}
+
+.archive__item-excerpt {
+  max-width: 720px;
+  line-height: 1.55;
 }
 
 .research-image {
@@ -46,18 +59,24 @@ classes: research-wide
 
 .research-image img {
   width: 100%;
-  max-width: 720px;
+  max-width: 650px;
   height: auto;
   display: block;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .research-item {
-    display: block;
+    display: block !important;
+  }
+
+  .archive__item-title,
+  .archive__item-coauthors,
+  .archive__item-award {
+    white-space: normal;
   }
 
   .research-image {
-    margin-top: 16px;
+    margin-top: 18px;
     justify-content: center;
   }
 }
