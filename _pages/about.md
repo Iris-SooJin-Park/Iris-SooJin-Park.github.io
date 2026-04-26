@@ -8,22 +8,36 @@ redirect_from:
 ---
 
 <style>
+.page,
+.page__inner-wrap {
+  width: 100% !important;
+  max-width: 1350px !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .home-intro {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  gap: 36px;
+  grid-template-columns: 320px minmax(0, 700px);
+  gap: 70px;
   align-items: start;
 }
 
 .home-photo img {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   height: auto;
   display: block;
 }
 
 .home-about {
-  padding-top: 0px;
+  padding-top: 38px;
+  max-width: 700px;
+}
+
+.home-about h2 {
+  margin-top: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -33,6 +47,10 @@ redirect_from:
 
   .home-photo {
     margin-bottom: 24px;
+  }
+
+  .home-about {
+    padding-top: 0;
   }
 }
 </style>
