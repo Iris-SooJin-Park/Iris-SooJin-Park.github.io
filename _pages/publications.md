@@ -11,71 +11,6 @@ author_profile: false
 .list__item,
 .archive__item {
   width: 100% !important;
-  max-width: 1800px !important;
-  float: none !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.list__item {
-  clear: both !important;
-  margin-bottom: 45px !important;
-}
-
-.archive__item-title,
-.archive__item-coauthors,
-.archive__item-award {
-  white-space: nowrap;
-}
-
-.research-body {
-  display: grid !important;
-  grid-template-columns: minmax(850px, 1fr) 560px;
-  gap: 70px;
-  align-items: start;
-  margin-top: 10px;
-}
-
-.archive__item-excerpt {
-  max-width: none !important;
-  line-height: 1.55;
-}
-
-.research-image {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.research-image img {
-  width: 100%;
-  max-width: 560px;
-  height: auto;
-  display: block;
-}
-
-@media screen and (max-width: 900px) {
-  .archive__item-title,
-  .archive__item-coauthors,
-  .archive__item-award {
-    white-space: normal;
-  }
-
-  .research-body {
-    display: block !important;
-  }
-
-  .research-image {
-    margin-top: 18px;
-    justify-content: center;
-  }
-}
-<style>
-.page,
-.page__inner-wrap,
-.archive,
-.list__item,
-.archive__item {
-  width: 100% !important;
   max-width: 1250px !important;
   float: none !important;
   margin-left: auto !important;
@@ -84,7 +19,7 @@ author_profile: false
 
 .list__item {
   clear: both !important;
-  margin-bottom: 55px !important;
+  margin-bottom: 50px !important;
 }
 
 .archive__item-title,
@@ -93,17 +28,21 @@ author_profile: false
   white-space: nowrap;
 }
 
-.research-body {
+.research-body.has-image {
   display: grid !important;
-  grid-template-columns: minmax(0, 720px) 420px;
-  gap: 45px;
+  grid-template-columns: minmax(0, 820px) 300px;
+  gap: 35px;
   align-items: start;
   margin-top: 10px;
 }
 
 .archive__item-excerpt {
-  max-width: 720px !important;
   line-height: 1.55;
+  max-width: 820px !important;
+}
+
+.archive__item-excerpt.no-image {
+  max-width: 1000px !important;
 }
 
 .research-image {
@@ -114,7 +53,7 @@ author_profile: false
 
 .research-image img {
   width: 100%;
-  max-width: 420px;
+  max-width: 300px;
   height: auto;
   display: block;
 }
@@ -126,7 +65,7 @@ author_profile: false
     white-space: normal;
   }
 
-  .research-body {
+  .research-body.has-image {
     display: block !important;
   }
 
