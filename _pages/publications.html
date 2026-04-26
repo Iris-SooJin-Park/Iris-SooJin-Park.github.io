@@ -8,71 +8,64 @@ classes: research-wide
 <style>
 .page,
 .page__inner-wrap,
-.archive {
+.archive,
+.list__item,
+.archive__item {
   width: 100% !important;
-  max-width: 1500px !important;
+  max-width: 1450px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-.list__item,
-.archive__item {
-  width: 100% !important;
-  max-width: 1500px !important;
-  float: none !important;
+.list__item {
   clear: both !important;
+  margin-bottom: 40px !important;
 }
 
-.research-item {
-  display: grid !important;
-  grid-template-columns: minmax(650px, 1fr) minmax(520px, 650px);
-  column-gap: 80px;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-.research-text {
-  width: 100% !important;
-  max-width: none !important;
-}
-
-.archive__item-title {
-  white-space: nowrap;
-}
-
+.archive__item-title,
 .archive__item-coauthors,
 .archive__item-award {
   white-space: nowrap;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.research-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.85fr);
+  gap: 55px;
+  align-items: start;
+  margin-top: 8px;
 }
 
 .archive__item-excerpt {
-  max-width: 720px;
+  max-width: none !important;
   line-height: 1.55;
 }
 
 .research-image {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .research-image img {
   width: 100%;
-  max-width: 650px;
+  max-width: 560px;
   height: auto;
   display: block;
 }
 
 @media screen and (max-width: 900px) {
-  .research-item {
-    display: block !important;
-  }
-
   .archive__item-title,
   .archive__item-coauthors,
   .archive__item-award {
     white-space: normal;
+  }
+
+  .research-body {
+    display: block;
   }
 
   .research-image {
