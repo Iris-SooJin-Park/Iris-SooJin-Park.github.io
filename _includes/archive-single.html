@@ -35,45 +35,33 @@
       </p>
     {% endif %}
 
-    <!-- Award (bold) -->
+    <!-- Award -->
     {% if post.award %}
       <p class="archive__item-award" style="margin-top: 6px; color: #000;">
         🏆 <strong>{{ post.award }}</strong>
       </p>
     {% endif %}
 
-    <!-- BODY (THIS FIXES YOUR PROBLEM) -->
-    <div class="research-body">
-
-      <!-- Text -->
-      {% if post.content != "" %}
-        <div class="archive__item-excerpt">
-          {{ post.content | markdownify }}
-        </div>
-      {% endif %}
-
-      <!-- Image -->
-      {% if post.image %}
-        <div class="research-body has-image">
-          {% if post.content != "" %}
-            <div class="archive__item-excerpt">
-              {{ post.content | markdownify }}
-            </div>
-          {% endif %}
-
-          <div class="research-image">
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-          </div>
-        </div>
-      {% else %}
+    <!-- Body: image papers use two columns; no-image papers use full width -->
+    {% if post.image %}
+      <div class="research-body has-image">
         {% if post.content != "" %}
-          <div class="archive__item-excerpt no-image">
+          <div class="archive__item-excerpt">
             {{ post.content | markdownify }}
           </div>
         {% endif %}
-      {% endif %}
 
-    </div>
+        <div class="research-image">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        </div>
+      </div>
+    {% else %}
+      {% if post.content != "" %}
+        <div class="archive__item-excerpt no-image">
+          {{ post.content | markdownify }}
+        </div>
+      {% endif %}
+    {% endif %}
 
   </article>
 </div>
