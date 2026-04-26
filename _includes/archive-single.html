@@ -7,68 +7,59 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item research-item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
 
-    <div class="research-text">
+    <!-- Title -->
+    <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
 
-      <h2 class="archive__item-title" itemprop="headline">
-        {{ title }}
-      </h2>
+    <!-- Authors -->
+    {% if post.abstract %}
+      <p class="archive__item-coauthors"><em>{{ post.abstract | markdownify }}</em></p>
+    {% endif %}
 
-      {% if post.abstract %}
-        <p class="archive__item-coauthors"><em>{{ post.abstract | markdownify }}</em></p>
-      {% endif %}
+    <!-- Links -->
+    {% if post.paperurl or post.ssrnurl or post.slidesurl %}
+      <p>
+        {% assign sep = "" %}
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}">Download Paper</a>
+          {% assign sep = " | " %}
+        {% endif %}
+        {% if post.ssrnurl %}
+          {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
+          {% assign sep = " | " %}
+        {% endif %}
+        {% if post.slidesurl %}
+          {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
+        {% endif %}
+      </p>
+    {% endif %}
 
-      {% if post.position %}
-        <p class="archive__item-position">{{ post.position }}</p>
-      {% endif %}
+    <!-- Award (bold) -->
+    {% if post.award %}
+      <p class="archive__item-award" style="margin-top: 6px; color: #000;">
+        🏆 <strong>{{ post.award }}</strong>
+      </p>
+    {% endif %}
 
-      {% if post.collection == 'teaching' %}
-        <p>
-          {{ post.type }}<br>
-          <i>{{ post.venue }}</i>
-          {% if post.date %}
-            , {{ post.date | date: "%Y" }}
-          {% endif %}
-        </p>
-      {% endif %}
+    <!-- BODY (THIS FIXES YOUR PROBLEM) -->
+    <div class="research-body">
 
-      {% if post.paperurl or post.ssrnurl or post.slidesurl %}
-        <p>
-          {% assign sep = "" %}
-          {% if post.paperurl %}
-            <a href="{{ post.paperurl }}">Download Paper</a>
-            {% assign sep = " | " %}
-          {% endif %}
-          {% if post.ssrnurl %}
-            {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
-            {% assign sep = " | " %}
-          {% endif %}
-          {% if post.slidesurl %}
-            {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
-          {% endif %}
-        </p>
-      {% endif %}
-
-      {% if post.award %}
-        <p class="archive__item-award" style="margin-top: 6px; color: #000;">
-          🏆 {{ post.award }}
-        </p>
-      {% endif %}
-
+      <!-- Text -->
       {% if post.content != "" %}
-        <div class="archive__item-excerpt" style="margin-top: 8px;">
+        <div class="archive__item-excerpt">
           {{ post.content | markdownify }}
         </div>
       {% endif %}
 
-    </div>
+      <!-- Image -->
+      {% if post.image %}
+        <div class="research-image">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        </div>
+      {% endif %}
 
-    {% if post.image %}
-      <div class="research-image">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-      </div>
-    {% endif %}
+    </div>
 
   </article>
 </div>
