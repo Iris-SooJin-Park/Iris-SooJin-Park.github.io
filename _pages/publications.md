@@ -11,7 +11,7 @@ author_profile: false
 .list__item,
 .archive__item {
   width: 100% !important;
-  max-width: 1450px !important;
+  max-width: 1800px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -19,23 +19,21 @@ author_profile: false
 
 .list__item {
   clear: both !important;
-  margin-bottom: 40px !important;
+  margin-bottom: 45px !important;
 }
 
 .archive__item-title,
 .archive__item-coauthors,
 .archive__item-award {
   white-space: nowrap;
-  max-width: 100%;
-  overflow: visible;
 }
 
 .research-body {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.85fr);
-  gap: 55px;
+  display: grid !important;
+  grid-template-columns: minmax(850px, 1fr) 560px;
+  gap: 70px;
   align-items: start;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .archive__item-excerpt {
@@ -46,7 +44,6 @@ author_profile: false
 .research-image {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
 }
 
 .research-image img {
@@ -64,7 +61,7 @@ author_profile: false
   }
 
   .research-body {
-    display: block;
+    display: block !important;
   }
 
   .research-image {
