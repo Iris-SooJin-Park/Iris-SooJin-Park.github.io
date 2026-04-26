@@ -11,7 +11,7 @@ author_profile: false
 .list__item,
 .archive__item {
   width: 100% !important;
-  max-width: 1250px !important;
+  max-width: 1350px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -30,19 +30,19 @@ author_profile: false
 
 .research-body.has-image {
   display: grid !important;
-  grid-template-columns: minmax(0, 820px) 300px;
-  gap: 35px;
+  grid-template-columns: minmax(0, 850px) 300px;
+  gap: 40px;
   align-items: start;
   margin-top: 10px;
 }
 
 .archive__item-excerpt {
   line-height: 1.55;
-  max-width: 820px !important;
+  max-width: 850px !important;
 }
 
 .archive__item-excerpt.no-image {
-  max-width: 1000px !important;
+  max-width: 1050px !important;
 }
 
 .research-image {
