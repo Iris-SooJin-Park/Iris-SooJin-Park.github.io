@@ -9,58 +9,67 @@
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
 
-    <!-- Title -->
     <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
 
-    <!-- Authors -->
-    {% if post.abstract %}
-      <p class="archive__item-coauthors"><em>{{ post.abstract | markdownify }}</em></p>
-    {% endif %}
+    {% if post.collection == 'teaching' %}
 
-    <!-- Links -->
-    {% if post.paperurl or post.ssrnurl or post.slidesurl %}
       <p>
-        {% assign sep = "" %}
-        {% if post.paperurl %}
-          <a href="{{ post.paperurl }}">Download Paper</a>
-          {% assign sep = " | " %}
-        {% endif %}
-        {% if post.ssrnurl %}
-          {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
-          {% assign sep = " | " %}
-        {% endif %}
-        {% if post.slidesurl %}
-          {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
+        {{ post.type }}<br>
+        <i>{{ post.venue }}</i>
+        {% if post.date %}
+          , {{ post.date | date: "%Y" }}
         {% endif %}
       </p>
-    {% endif %}
 
-    <!-- Award -->
-    {% if post.award %}
-      <p class="archive__item-award" style="margin-top: 6px; color: #000;">
-        🏆 <strong>{{ post.award }}</strong>
-      </p>
-    {% endif %}
+    {% else %}
 
-    <!-- Body: image papers use two columns; no-image papers use full width -->
-    {% if post.image %}
-      <div class="research-body has-image">
+      {% if post.abstract %}
+        <p class="archive__item-coauthors"><em>{{ post.abstract | markdownify }}</em></p>
+      {% endif %}
+
+      {% if post.paperurl or post.ssrnurl or post.slidesurl %}
+        <p>
+          {% assign sep = "" %}
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl }}">Download Paper</a>
+            {% assign sep = " | " %}
+          {% endif %}
+          {% if post.ssrnurl %}
+            {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
+            {% assign sep = " | " %}
+          {% endif %}
+          {% if post.slidesurl %}
+            {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
+          {% endif %}
+        </p>
+      {% endif %}
+
+      {% if post.award %}
+        <p class="archive__item-award" style="margin-top: 6px; color: #000;">
+          🏆 <strong>{{ post.award }}</strong>
+        </p>
+      {% endif %}
+
+      {% if post.image %}
+        <div class="research-body has-image">
+          {% if post.content != "" %}
+            <div class="archive__item-excerpt">
+              {{ post.content | markdownify }}
+            </div>
+          {% endif %}
+
+          <div class="research-image">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          </div>
+        </div>
+      {% else %}
         {% if post.content != "" %}
-          <div class="archive__item-excerpt">
+          <div class="archive__item-excerpt no-image">
             {{ post.content | markdownify }}
           </div>
         {% endif %}
-
-        <div class="research-image">
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-        </div>
-      </div>
-    {% else %}
-      {% if post.content != "" %}
-        <div class="archive__item-excerpt no-image">
-          {{ post.content | markdownify }}
-        </div>
       {% endif %}
+
     {% endif %}
 
   </article>
