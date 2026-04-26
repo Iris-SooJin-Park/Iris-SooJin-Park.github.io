@@ -11,7 +11,7 @@ author_profile: false
 .list__item,
 .archive__item {
   width: 100% !important;
-  max-width: 1500px !important;
+  max-width: 1650px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -33,7 +33,7 @@ author_profile: false
 
 .research-body.has-image {
   display: grid !important;
-  grid-template-columns: minmax(0, 980px) 300px;
+  grid-template-columns: minmax(0, 1120px) 300px;
   gap: 40px;
   align-items: start;
   margin-top: 10px;
@@ -41,11 +41,11 @@ author_profile: false
 
 .archive__item-excerpt {
   line-height: 1.55;
-  max-width: 980px !important;
+  max-width: 1120px !important;
 }
 
 .archive__item-excerpt.no-image {
-  max-width: 1180px !important;
+  max-width: 1300px !important;
 }
 
 .research-image {
