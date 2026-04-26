@@ -12,7 +12,7 @@ classes: research-wide
 .list__item,
 .archive__item {
   width: 100% !important;
-  max-width: 1800px !important;
+  max-width: 1250px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -20,7 +20,7 @@ classes: research-wide
 
 .list__item {
   clear: both !important;
-  margin-bottom: 45px !important;
+  margin-bottom: 55px !important;
 }
 
 .archive__item-title,
@@ -31,25 +31,26 @@ classes: research-wide
 
 .research-body {
   display: grid !important;
-  grid-template-columns: minmax(850px, 1fr) 560px;
-  gap: 70px;
+  grid-template-columns: minmax(0, 720px) 420px;
+  gap: 45px;
   align-items: start;
   margin-top: 10px;
 }
 
 .archive__item-excerpt {
-  max-width: none !important;
+  max-width: 720px !important;
   line-height: 1.55;
 }
 
 .research-image {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .research-image img {
   width: 100%;
-  max-width: 560px;
+  max-width: 420px;
   height: auto;
   display: block;
 }
