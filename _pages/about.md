@@ -42,18 +42,22 @@ redirect_from:
   margin-top: 0;
 }
 
-/* Contact links (same style as card) */
+/* Contact links */
 .home-links {
   margin-top: 22px;
   font-size: 0.95em;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .home-links p {
-  margin: 6px 0;
+  margin: 0;
 }
 
 .home-links i {
-  margin-right: 8px;
+  margin-right: 6px;
   color: #555;
 }
 
@@ -105,7 +109,7 @@ redirect_from:
       in May 2021, graduating with honors.
     </p>
 
-    <!-- Contact (same icons as card) -->
+    <!-- Contact -->
     <div class="home-links">
       <p><i class="fa fa-fw fa-university"></i> UW-Madison</p>
 
@@ -119,7 +123,7 @@ redirect_from:
       {% if site.author.linkedin %}
         <p>
           <i class="fab fa-fw fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">
+          <a href="https://www.linkedin.com/in/{{ site.author.linkedin | replace: '/', '' }}">
             LinkedIn
           </a>
         </p>
