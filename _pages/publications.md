@@ -11,7 +11,7 @@ author_profile: false
 .list__item,
 .archive__item {
   width: 100% !important;
-  max-width: 1350px !important;
+  max-width: 1400px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -22,7 +22,10 @@ author_profile: false
   margin-bottom: 50px !important;
 }
 
-.archive__item-title,
+.archive__item-title {
+  white-space: normal;
+}
+
 .archive__item-coauthors,
 .archive__item-award {
   white-space: nowrap;
@@ -30,7 +33,7 @@ author_profile: false
 
 .research-body.has-image {
   display: grid !important;
-  grid-template-columns: minmax(0, 850px) 300px;
+  grid-template-columns: minmax(0, 900px) 300px;
   gap: 40px;
   align-items: start;
   margin-top: 10px;
@@ -38,11 +41,11 @@ author_profile: false
 
 .archive__item-excerpt {
   line-height: 1.55;
-  max-width: 850px !important;
+  max-width: 900px !important;
 }
 
 .archive__item-excerpt.no-image {
-  max-width: 1050px !important;
+  max-width: 1100px !important;
 }
 
 .research-image {
@@ -59,7 +62,6 @@ author_profile: false
 }
 
 @media screen and (max-width: 900px) {
-  .archive__item-title,
   .archive__item-coauthors,
   .archive__item-award {
     white-space: normal;
