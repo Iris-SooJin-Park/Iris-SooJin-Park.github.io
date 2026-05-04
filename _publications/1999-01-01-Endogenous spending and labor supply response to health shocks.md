@@ -1,5 +1,5 @@
 ---
-title: "Endogenous spending and labor supply response to health shocks"
+title: "Endogenous Spending and Labor Supply Response to Health Shocks"
 collection: publications
 category: work_in_progress
 no_link: true
