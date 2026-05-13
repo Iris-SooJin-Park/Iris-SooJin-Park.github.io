@@ -1,5 +1,5 @@
 ---
-title: "Myopia and Moral Hazard in Health Insurance"
+title: "Do Patients Respond to the Right Price? Myopia and Price Misperception in Health Insurance"
 collection: publications
 category: working_papers
 image: /images/FigD_daily_pctile_4linesWI_dist-1.png
