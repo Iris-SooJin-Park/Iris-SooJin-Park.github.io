@@ -106,7 +106,7 @@ redirect_from:
     <p>
       Before joining the risk and insurance department, I earned undergraduate 
       degrees in economics and mathematics from the University of Wisconsin-Madison 
-      in May 2021, graduating with honors.
+      in May 2021, graduating with distinction.
     </p>
 
     <!-- Contact -->
