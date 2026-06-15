@@ -1,4 +1,3 @@
-```html
 ---
 permalink: /
 title: "Iris SooJin Park"
@@ -220,4 +219,3 @@ html {
     Risk management and insurance, business analytics, health insurance, and behavioral decision-making.
   </p>
 </section>
-```
