@@ -1,3 +1,4 @@
+```html
 ---
 permalink: /
 title: "Iris SooJin Park"
@@ -14,6 +15,11 @@ redirect_from:
   max-width: 1400px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* Smooth scrolling for navigation links */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Layout */
@@ -61,6 +67,34 @@ redirect_from:
   color: #555;
 }
 
+/* Section styling */
+.section-divider {
+  margin: 60px 0 35px 0;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.home-section {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  padding-top: 25px;
+}
+
+.home-section h2 {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+}
+
+.home-section h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.home-section p {
+  margin-bottom: 16px;
+}
+
 /* Mobile */
 @media screen and (max-width: 768px) {
   .home-intro {
@@ -73,6 +107,10 @@ redirect_from:
 
   .home-about {
     padding-top: 0;
+  }
+
+  .home-section {
+    margin-bottom: 45px;
   }
 }
 </style>
@@ -133,3 +171,53 @@ redirect_from:
   </div>
 
 </div>
+
+
+<hr class="section-divider">
+
+
+<section id="cv" class="home-section">
+  <h2>CV</h2>
+
+  <p>
+    You can download my CV 
+    <a href="/files/Iris_SooJin_Park_CV(recent).pdf" target="_blank">here</a>.
+  </p>
+</section>
+
+
+<section id="research" class="home-section">
+  <h2>Research</h2>
+
+  <h3>Older Americans and Life Insurance</h3>
+  <p>
+    This project studies life insurance ownership among older Americans and examines
+    how surviving spouses use life insurance payouts.
+  </p>
+
+  <h3>When the Choice Should Be Clear: Visual Decision Aids and Health Insurance Selection</h3>
+  <p>
+    This project studies how visual decision aids affect health insurance choices.
+  </p>
+
+  <h3>Evaluating the Effects of Moderate Deductible Increase on Health Care Utilization</h3>
+  <p>
+    This project examines behavioral responses to a moderate deductible increase in health insurance.
+  </p>
+</section>
+
+
+<section id="teaching" class="home-section">
+  <h2>Teaching</h2>
+
+  <h3>Teaching Assistant</h3>
+  <p>
+    Business Analytics II, Wisconsin School of Business, University of Wisconsin-Madison.
+  </p>
+
+  <h3>Teaching Interests</h3>
+  <p>
+    Risk management and insurance, business analytics, health insurance, and behavioral decision-making.
+  </p>
+</section>
+```
