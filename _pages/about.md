@@ -11,7 +11,7 @@ redirect_from:
 .page,
 .page__inner-wrap {
   width: 100% !important;
-  max-width: 1150px !important;
+  max-width: 1350px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -28,16 +28,17 @@ html {
 /* Intro layout */
 .home-intro {
   display: grid;
-  grid-template-columns: 250px minmax(0, 1fr);
-  gap: 42px;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 55px;
   align-items: start;
-  margin-bottom: 24px;
+  max-width: 1050px;
+  margin: 0 auto 24px auto;
 }
 
 /* Photo */
 .home-photo img {
   width: 100%;
-  max-width: 230px;
+  max-width: 240px;
   height: auto;
   display: block;
 }
@@ -78,13 +79,14 @@ html {
 
 /* Section styling */
 .section-divider {
-  margin: 24px 0 20px 0;
+  max-width: 1200px;
+  margin: 24px auto 20px auto;
   border: none;
   border-top: 1px solid #e5e5e5;
 }
 
 .home-section {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto 30px auto;
   padding-top: 4px;
 }
@@ -112,7 +114,7 @@ html {
 
 /* Research section */
 .research-section {
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .research-category {
@@ -127,7 +129,7 @@ html {
 
 .research-section .archive__item {
   width: 100% !important;
-  max-width: 1000px !important;
+  max-width: 1200px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -147,7 +149,7 @@ html {
 
 .research-section .research-body.has-image {
   display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 180px;
+  grid-template-columns: minmax(0, 1fr) 150px;
   gap: 22px;
   align-items: start;
   margin-top: 6px;
@@ -155,12 +157,12 @@ html {
 
 .research-section .archive__item-excerpt {
   line-height: 1.45;
-  max-width: 760px !important;
+  max-width: 1000px !important;
   margin-top: 5px;
 }
 
 .research-section .archive__item-excerpt.no-image {
-  max-width: 960px !important;
+  max-width: 1150px !important;
 }
 
 .research-section .research-image {
@@ -171,12 +173,16 @@ html {
 
 .research-section .research-image img {
   width: 100%;
-  max-width: 180px;
+  max-width: 150px;
   height: auto;
   display: block;
 }
 
 /* Teaching section */
+.teaching-section {
+  max-width: 1200px;
+}
+
 .teaching-section .list__item {
   clear: both !important;
   margin-bottom: 22px !important;
@@ -184,7 +190,7 @@ html {
 
 .teaching-section .archive__item {
   width: 100% !important;
-  max-width: 1000px !important;
+  max-width: 1200px !important;
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -199,6 +205,7 @@ html {
 
 .teaching-section .archive__item-excerpt {
   line-height: 1.45;
+  max-width: 1100px !important;
   margin-top: 5px;
 }
 
@@ -206,6 +213,7 @@ html {
 @media screen and (max-width: 768px) {
   .home-intro {
     display: block;
+    max-width: 100%;
   }
 
   .home-photo {
