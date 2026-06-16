@@ -1,78 +1,119 @@
 {% include base_path %}
 
 {% if post.id %}
-{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
-{% assign title = post.title %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign coauthor_line = "" %}
+{% if post.abstract %}
+  {% assign coauthor_line = post.abstract | markdownify | remove: "<p>" | remove: "</p>" %}
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item custom-archive-item">
-  <article class="archive__item custom-archive-article" itemscope itemtype="http://schema.org/CreativeWork">
 
-{% if post.collection == 'teaching' %}
+  {% if include.type == "compact" and post.collection != "teaching" %}
 
-  <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
+    <div class="compact-paper-item">
+      <span class="compact-paper-title">
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}">{{ title }}</a>
+        {% else %}
+          {{ title }}
+        {% endif %}
+      </span>
 
-  <p class="teaching-meta">
-    {{ post.type }}<br>
-    <i>{{ post.venue }}</i>
-    {% if post.date %}
-      , {{ post.date | date: "%Y" }}
-    {% endif %}
-  </p>
-
-{% else %}
-
-  <div class="publication-card {% if post.image %}has-image{% endif %}">
-
-    <div class="publication-text">
-      <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
-
-      {% if post.abstract %}
-        <div class="publication-abstract">
-          <em>{{ post.abstract | markdownify }}</em>
-        </div>
-      {% endif %}
-
-      {% if post.paperurl or post.ssrnurl or post.slidesurl %}
-        <p class="publication-links">
-          {% assign sep = "" %}
-          {% if post.paperurl %}
-            <a href="{{ post.paperurl }}">Download Paper</a>
-            {% assign sep = " | " %}
-          {% endif %}
-          {% if post.ssrnurl %}
-            {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
-            {% assign sep = " | " %}
-          {% endif %}
-          {% if post.slidesurl %}
-            {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
-          {% endif %}
-        </p>
-      {% endif %}
-
-      {% if post.award %}
-        <p class="archive__item-award">
-          🏆 <strong>{{ post.award }}</strong>
-        </p>
-      {% endif %}
-
-      {% if post.content != "" %}
-        <div class="archive__item-excerpt {% unless post.image %}no-image{% endunless %}">
-          {{ post.content | markdownify }}
-        </div>
+      {% if coauthor_line != "" %}
+        <span class="compact-paper-meta"> {{ coauthor_line }}</span>
       {% endif %}
     </div>
 
-    {% if post.image %}
-      <div class="research-image">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+  {% elsif include.type == "teaching_compact" and post.collection == "teaching" %}
+
+    <div class="compact-teaching-item">
+      <div class="compact-teaching-title">{{ title }}</div>
+      <div class="compact-teaching-meta">
+        {{ post.type }}
+        {% if post.date %}
+          , {{ post.date | date: "%Y" }}
+        {% endif %}
+        <br>
+        <em>{{ post.venue }}</em>
       </div>
-    {% endif %}
+    </div>
 
-  </div>
+  {% else %}
 
-{% endif %}
+    <article class="archive__item custom-archive-article" itemscope itemtype="http://schema.org/CreativeWork">
 
-  </article>
+      {% if post.collection == 'teaching' %}
+
+        <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
+
+        <p class="teaching-meta">
+          {{ post.type }}<br>
+          <i>{{ post.venue }}</i>
+          {% if post.date %}
+            , {{ post.date | date: "%Y" }}
+          {% endif %}
+        </p>
+
+      {% else %}
+
+        <div class="publication-card {% if post.image %}has-image{% endif %}">
+
+          <div class="publication-text">
+            <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
+
+            {% if post.abstract %}
+              <div class="publication-abstract">
+                <em>{{ post.abstract | markdownify }}</em>
+              </div>
+            {% endif %}
+
+            {% if post.paperurl or post.ssrnurl or post.slidesurl %}
+              <p class="publication-links">
+                {% assign sep = "" %}
+                {% if post.paperurl %}
+                  <a href="{{ post.paperurl }}">Download Paper</a>
+                  {% assign sep = " | " %}
+                {% endif %}
+                {% if post.ssrnurl %}
+                  {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
+                  {% assign sep = " | " %}
+                {% endif %}
+                {% if post.slidesurl %}
+                  {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
+                {% endif %}
+              </p>
+            {% endif %}
+
+            {% if post.award %}
+              <p class="archive__item-award">
+                🏆 <strong>{{ post.award }}</strong>
+              </p>
+            {% endif %}
+
+            {% if post.content != "" %}
+              <div class="archive__item-excerpt {% unless post.image %}no-image{% endunless %}">
+                {{ post.content | markdownify }}
+              </div>
+            {% endif %}
+          </div>
+
+          {% if post.image %}
+            <div class="research-image">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+            </div>
+          {% endif %}
+
+        </div>
+
+      {% endif %}
+
+    </article>
+
+  {% endif %}
+
 </div>

@@ -257,47 +257,71 @@ html {
   background: #ffffff;
 }
 
-/* Teaching */
-.teaching-section {
-  width: 980px !important;
-  max-width: 980px !important;
+/* Compact Work in Progress list */
+.work-in-progress-list {
+  margin-top: 4px;
+  margin-bottom: 24px;
 }
 
-.teaching-section .list__item,
-.teaching-section .custom-archive-item,
-.teaching-section .archive__item,
-.teaching-section .custom-archive-article {
-  width: 980px !important;
+.compact__item.custom-archive-item {
+  width: 100% !important;
   max-width: 980px !important;
-  clear: both !important;
-  float: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin-bottom: 9px !important;
 }
 
-.teaching-section .archive__item,
-.teaching-section .custom-archive-article {
-  padding: 14px 0 16px 0;
+.compact-paper-item {
+  width: 100% !important;
+  max-width: 980px !important;
+  line-height: 1.45;
+  margin-bottom: 9px;
+}
+
+.compact-paper-title {
+  font-weight: 700;
+}
+
+.compact-paper-title a {
+  text-decoration: underline;
+}
+
+.compact-paper-meta,
+.compact-paper-meta p {
+  color: #333;
+  display: inline;
+  margin: 0;
+}
+
+/* Compact Teaching list */
+.teaching-list {
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+
+.teaching_compact__item.custom-archive-item {
+  width: 100% !important;
+  max-width: 980px !important;
+  margin-bottom: 14px !important;
+}
+
+.compact-teaching-item {
+  width: 100% !important;
+  max-width: 980px !important;
+  padding: 0 0 14px 0;
+  margin-bottom: 14px;
   border-bottom: 1px solid #eeeeee;
 }
 
-.teaching-section .archive__item-title {
-  width: 980px !important;
-  max-width: 980px !important;
-  white-space: normal !important;
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-size: 1.02rem !important;
-  line-height: 1.25;
+.compact-teaching-title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  margin-bottom: 4px;
 }
 
-.teaching-meta {
-  width: 980px !important;
-  max-width: 980px !important;
-  white-space: normal !important;
-  line-height: 1.45;
-  margin-top: 4px;
-  margin-bottom: 8px;
+.compact-teaching-meta {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
 }
 
 /* Mobile */
@@ -456,20 +480,23 @@ html {
 
   <h3 class="research-category">Work in Progress</h3>
 
-{% assign work_in_progress = site.publications | where: "category", "work_in_progress" %}
-{% for post in work_in_progress reversed %}
-{% include archive-single.html %}
-{% endfor %}
+  <div class="work-in-progress-list">
+    {% assign work_in_progress = site.publications | where: "category", "work_in_progress" %}
+    {% for post in work_in_progress reversed %}
+      {% include archive-single.html type="compact" %}
+    {% endfor %}
+  </div>
 
 </section>
 
 <section id="teaching" class="home-section teaching-section">
   <h2>Teaching</h2>
 
-{% include base_path %}
+  <div class="teaching-list">
+    {% include base_path %}
 
-{% for post in site.teaching reversed %}
-{% include archive-single.html %}
-{% endfor %}
-
+    {% for post in site.teaching reversed %}
+      {% include archive-single.html type="teaching_compact" %}
+    {% endfor %}
+  </div>
 </section>
