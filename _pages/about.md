@@ -10,11 +10,14 @@ redirect_from:
 
 <style>
 .page,
-.page__inner-wrap {
+.page__inner-wrap,
+.page__content,
+.archive {
   width: 100% !important;
   max-width: 1350px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  float: none !important;
 }
 
 html {
@@ -92,7 +95,8 @@ html {
 }
 
 .home-section {
-  max-width: 1100px;
+  width: 100% !important;
+  max-width: 1100px !important;
   margin: 0 auto 30px auto;
   padding-top: 4px;
 }
@@ -121,7 +125,8 @@ html {
 
 /* Research */
 .research-section {
-  max-width: 1100px;
+  width: 100% !important;
+  max-width: 1100px !important;
 }
 
 .research-category {
@@ -146,22 +151,13 @@ html {
   margin-right: 0 !important;
 }
 
-.research-section .archive__item-title {
+.research-section .archive__item-title,
+.research-section .archive__item-title a {
   white-space: normal !important;
   max-width: 1100px !important;
   margin-top: 0;
   margin-bottom: 6px;
   font-size: 1.05em;
-}
-
-.research-section .archive__item-title a {
-  white-space: normal !important;
-}
-
-.research-section .archive__item-coauthors,
-.research-section .archive__item-award {
-  white-space: normal !important;
-  max-width: 1100px !important;
 }
 
 .publication-abstract,
@@ -182,44 +178,51 @@ html {
   white-space: normal !important;
 }
 
-.research-section .research-body {
-  width: 100% !important;
-  max-width: 1100px !important;
-}
-
+/* Force research text and image layout wider */
 .research-section .research-body.has-image {
   display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 150px;
-  gap: 22px;
+  grid-template-columns: 850px 150px !important;
+  gap: 30px !important;
+  width: 1030px !important;
+  max-width: 1030px !important;
   align-items: start;
   margin-top: 6px;
 }
 
-.research-section .archive__item-excerpt,
-.research-section .archive__item-excerpt p,
-.research-section .archive__item p {
-  width: 100% !important;
-  max-width: 1100px !important;
+.research-section .research-body.has-image .archive__item-excerpt,
+.research-section .research-body.has-image .archive__item-excerpt p {
+  width: 850px !important;
+  max-width: 850px !important;
   line-height: 1.45;
   margin-top: 5px;
 }
 
 .research-section .research-image {
+  width: 150px !important;
+  max-width: 150px !important;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
 .research-section .research-image img {
-  width: 100%;
-  max-width: 150px;
+  width: 150px !important;
+  max-width: 150px !important;
   height: auto;
   display: block;
 }
 
+.research-section .archive__item-excerpt.no-image,
+.research-section .archive__item-excerpt.no-image p {
+  width: 1030px !important;
+  max-width: 1030px !important;
+  line-height: 1.45;
+}
+
 /* Teaching */
 .teaching-section {
-  max-width: 1100px;
+  width: 100% !important;
+  max-width: 1100px !important;
 }
 
 .teaching-section .list__item,
@@ -265,33 +268,6 @@ html {
   margin-top: 5px;
 }
 
-/* Very strong homepage archive overrides */
-.home-section .archive__item,
-.home-section .custom-archive-article,
-.home-section .archive__item-excerpt,
-.home-section .archive__item-excerpt p,
-.home-section .archive__item p,
-.home-section .publication-abstract,
-.home-section .publication-abstract p,
-.home-section .publication-links,
-.home-section .teaching-meta {
-  width: 100% !important;
-  max-width: 1100px !important;
-  white-space: normal !important;
-}
-
-.home-section .archive__item-title,
-.home-section .archive__item-title a {
-  max-width: 1100px !important;
-  white-space: normal !important;
-}
-
-.home-section .research-body,
-.home-section .research-body.has-image {
-  width: 100% !important;
-  max-width: 1100px !important;
-}
-
 /* Mobile */
 @media screen and (max-width: 768px) {
   .home-intro {
@@ -319,15 +295,26 @@ html {
 @media screen and (max-width: 900px) {
   .research-section .research-body.has-image {
     display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .research-section .research-body.has-image .archive__item-excerpt,
+  .research-section .research-body.has-image .archive__item-excerpt p {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .research-section .research-image {
     margin-top: 14px;
     justify-content: center;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .research-section .research-image img {
-    max-width: 210px;
+    max-width: 210px !important;
+    width: 100% !important;
   }
 }
 </style>
