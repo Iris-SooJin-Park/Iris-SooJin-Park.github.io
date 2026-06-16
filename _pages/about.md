@@ -14,7 +14,7 @@ redirect_from:
 .page__content,
 .archive {
   width: 100% !important;
-  max-width: 1320px !important;
+  max-width: 1220px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   float: none !important;
@@ -25,29 +25,29 @@ html {
 }
 
 .page__content {
-  font-size: 0.94em;
+  font-size: 0.93em;
 }
 
 /* Intro layout */
 .home-intro {
   display: grid;
-  grid-template-columns: 270px minmax(0, 1fr);
-  gap: 58px;
+  grid-template-columns: 255px minmax(0, 1fr);
+  gap: 52px;
   align-items: start;
-  max-width: 1120px;
+  max-width: 1020px;
   margin: 0 auto 34px auto;
 }
 
 .home-photo img {
   width: 100%;
-  max-width: 255px;
+  max-width: 240px;
   height: auto;
   display: block;
 }
 
 .home-about {
-  padding-top: 8px;
-  max-width: 780px;
+  padding-top: 6px;
+  max-width: 720px;
 }
 
 .home-about h2 {
@@ -56,19 +56,19 @@ html {
 }
 
 .home-about p {
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }
 
 .job-market-note {
   font-size: 1.02em;
-  margin-bottom: 13px !important;
+  margin-bottom: 12px !important;
   color: #000;
 }
 
 /* Contact links */
 .home-links {
-  margin-top: 16px;
-  font-size: 0.93em;
+  margin-top: 15px;
+  font-size: 0.92em;
   display: flex;
   gap: 18px;
   align-items: center;
@@ -86,7 +86,7 @@ html {
 
 /* Section layout */
 .section-divider {
-  max-width: 1120px;
+  max-width: 1020px;
   margin: 28px auto 24px auto;
   border: none;
   border-top: 1px solid #e6e6e6;
@@ -94,9 +94,9 @@ html {
 
 .home-section {
   width: 100% !important;
-  max-width: 1120px !important;
+  max-width: 1020px !important;
   margin: 0 auto 42px auto;
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 .home-section h2 {
@@ -129,82 +129,86 @@ html {
 /* Research section */
 .research-section {
   width: 100% !important;
-  max-width: 1120px !important;
+  max-width: 1020px !important;
 }
 
 .research-category {
-  margin-top: 24px !important;
-  margin-bottom: 18px !important;
+  margin-top: 22px !important;
+  margin-bottom: 16px !important;
   font-size: 1.08em;
   font-weight: 700;
   color: #444;
 }
 
-/* Each publication item */
+/* Publication item wrapper */
 .research-section .list__item,
 .research-section .custom-archive-item {
   clear: both !important;
   width: 100% !important;
-  max-width: 1120px !important;
-  margin-bottom: 24px !important;
+  max-width: 1020px !important;
+  margin-bottom: 0 !important;
 }
 
 .research-section .archive__item,
 .research-section .custom-archive-article {
   width: 100% !important;
-  max-width: 1120px !important;
+  max-width: 1020px !important;
   float: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
 
-/* Card-like paper layout */
+/* Publication card */
 .publication-card {
   width: 100% !important;
-  max-width: 1120px !important;
-  padding: 18px 0 20px 0;
+  max-width: 1020px !important;
+  padding: 20px 0 24px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
 .publication-card.has-image {
   display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 170px;
-  gap: 34px;
-  align-items: start;
+  grid-template-columns: minmax(0, 730px) 230px;
+  gap: 36px;
+  align-items: stretch;
 }
 
 .publication-text {
   width: 100% !important;
-  max-width: 900px !important;
+  max-width: 730px !important;
 }
 
+/* Title */
 .research-section .archive__item-title,
 .research-section .archive__item-title a {
   white-space: normal !important;
-  max-width: 900px !important;
+  max-width: 730px !important;
   margin-top: 0;
   margin-bottom: 8px;
-  font-size: 1.05em;
+  font-size: 1.04rem !important;
   line-height: 1.25;
 }
 
+/* Coauthors / abstract line */
 .publication-abstract,
 .publication-abstract p {
   width: 100% !important;
-  max-width: 900px !important;
+  max-width: 730px !important;
   white-space: normal !important;
   line-height: 1.45;
   margin-top: 4px;
   margin-bottom: 8px;
 }
 
+/* Links */
 .publication-links {
   width: 100% !important;
-  max-width: 900px !important;
+  max-width: 730px !important;
   margin-top: 6px;
   margin-bottom: 10px;
 }
 
+/* Award */
 .research-section .archive__item-award {
   margin-top: 6px;
   margin-bottom: 10px;
@@ -213,72 +217,87 @@ html {
   line-height: 1.35;
 }
 
+/* Abstract/body */
 .research-section .archive__item-excerpt,
 .research-section .archive__item-excerpt p {
   width: 100% !important;
-  max-width: 900px !important;
+  max-width: 730px !important;
   line-height: 1.48;
   margin-top: 6px;
 }
 
-.research-section .archive__item-excerpt.no-image,
-.research-section .archive__item-excerpt.no-image p {
-  max-width: 1050px !important;
+/* No-image papers can use full width */
+.publication-card:not(.has-image) .publication-text,
+.publication-card:not(.has-image) .archive__item-title,
+.publication-card:not(.has-image) .archive__item-title a,
+.publication-card:not(.has-image) .publication-abstract,
+.publication-card:not(.has-image) .publication-abstract p,
+.publication-card:not(.has-image) .publication-links,
+.publication-card:not(.has-image) .archive__item-excerpt,
+.publication-card:not(.has-image) .archive__item-excerpt p {
+  max-width: 980px !important;
 }
 
+/* Research image: starts at title and spans the card height */
 .research-image {
-  width: 170px !important;
-  max-width: 170px !important;
+  width: 230px !important;
+  max-width: 230px !important;
+  height: 100% !important;
+  align-self: stretch !important;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-top: 2px;
+  align-items: stretch;
+  justify-content: center;
+  padding-top: 0;
 }
 
 .research-image img {
-  width: 170px !important;
-  max-width: 170px !important;
-  height: auto;
+  width: 100% !important;
+  max-width: 230px !important;
+  height: 100% !important;
+  max-height: 280px !important;
+  object-fit: contain;
   display: block;
   border: 1px solid #eeeeee;
+  background: #ffffff;
 }
 
 /* Teaching */
 .teaching-section {
   width: 100% !important;
-  max-width: 1120px !important;
+  max-width: 1020px !important;
 }
 
 .teaching-section .list__item,
 .teaching-section .custom-archive-item {
   clear: both !important;
   width: 100% !important;
-  max-width: 1120px !important;
-  margin-bottom: 18px !important;
+  max-width: 1020px !important;
+  margin-bottom: 0 !important;
 }
 
 .teaching-section .archive__item,
 .teaching-section .custom-archive-article {
   width: 100% !important;
-  max-width: 1120px !important;
+  max-width: 1020px !important;
   float: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  padding-bottom: 14px;
+  padding: 14px 0 16px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
 .teaching-section .archive__item-title {
   white-space: normal !important;
-  max-width: 1050px !important;
+  max-width: 980px !important;
   margin-top: 0;
   margin-bottom: 5px;
-  font-size: 1.02em;
+  font-size: 1.02rem !important;
+  line-height: 1.25;
 }
 
 .teaching-meta {
   width: 100% !important;
-  max-width: 1050px !important;
+  max-width: 980px !important;
   white-space: normal !important;
   line-height: 1.45;
   margin-top: 4px;
@@ -287,6 +306,16 @@ html {
 
 /* Mobile */
 @media screen and (max-width: 900px) {
+  .page,
+  .page__inner-wrap,
+  .page__content,
+  .archive,
+  .home-section,
+  .research-section,
+  .teaching-section {
+    max-width: 100% !important;
+  }
+
   .home-intro {
     display: block;
     max-width: 100%;
@@ -312,6 +341,8 @@ html {
   .publication-abstract,
   .publication-abstract p,
   .publication-links,
+  .research-section .archive__item-title,
+  .research-section .archive__item-title a,
   .research-section .archive__item-excerpt,
   .research-section .archive__item-excerpt p {
     max-width: 100% !important;
@@ -321,12 +352,15 @@ html {
     margin-top: 14px;
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
     justify-content: center;
   }
 
   .research-image img {
-    width: 210px !important;
-    max-width: 210px !important;
+    width: 220px !important;
+    max-width: 220px !important;
+    height: auto !important;
+    max-height: none !important;
   }
 
   .home-section {
