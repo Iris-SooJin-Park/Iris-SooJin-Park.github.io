@@ -1,79 +1,78 @@
 {% include base_path %}
 
 {% if post.id %}
-{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
-{% assign title = post.title %}
+  {% assign title = post.title %}
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item custom-archive-item">
   <article class="archive__item custom-archive-article" itemscope itemtype="http://schema.org/CreativeWork">
 
+    {% if post.collection == 'teaching' %}
 
-<h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
+      <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
 
-{% if post.collection == 'teaching' %}
+      <p class="teaching-meta">
+        {{ post.type }}<br>
+        <i>{{ post.venue }}</i>
+        {% if post.date %}
+          , {{ post.date | date: "%Y" }}
+        {% endif %}
+      </p>
 
-  <p class="teaching-meta">
-    {{ post.type }}<br>
-    <i>{{ post.venue }}</i>
-    {% if post.date %}
-      , {{ post.date | date: "%Y" }}
-    {% endif %}
-  </p>
+    {% else %}
 
-{% else %}
+      <div class="publication-card {% if post.image %}has-image{% endif %}">
 
-  {% if post.abstract %}
-    <div class="publication-abstract">
-      <em>{{ post.abstract | markdownify }}</em>
-    </div>
-  {% endif %}
+        <div class="publication-text">
+          <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
 
-  {% if post.paperurl or post.ssrnurl or post.slidesurl %}
-    <p class="publication-links">
-      {% assign sep = "" %}
-      {% if post.paperurl %}
-        <a href="{{ post.paperurl }}">Download Paper</a>
-        {% assign sep = " | " %}
-      {% endif %}
-      {% if post.ssrnurl %}
-        {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
-        {% assign sep = " | " %}
-      {% endif %}
-      {% if post.slidesurl %}
-        {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
-      {% endif %}
-    </p>
-  {% endif %}
+          {% if post.abstract %}
+            <div class="publication-abstract">
+              <em>{{ post.abstract | markdownify }}</em>
+            </div>
+          {% endif %}
 
-  {% if post.award %}
-    <p class="archive__item-award">
-      🏆 <strong>{{ post.award }}</strong>
-    </p>
-  {% endif %}
+          {% if post.paperurl or post.ssrnurl or post.slidesurl %}
+            <p class="publication-links">
+              {% assign sep = "" %}
+              {% if post.paperurl %}
+                <a href="{{ post.paperurl }}">Download Paper</a>
+                {% assign sep = " | " %}
+              {% endif %}
+              {% if post.ssrnurl %}
+                {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
+                {% assign sep = " | " %}
+              {% endif %}
+              {% if post.slidesurl %}
+                {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
+              {% endif %}
+            </p>
+          {% endif %}
 
-  {% if post.image %}
-    <div class="research-body has-image">
-      {% if post.content != "" %}
-        <div class="archive__item-excerpt">
-          {{ post.content | markdownify }}
+          {% if post.award %}
+            <p class="archive__item-award">
+              🏆 <strong>{{ post.award }}</strong>
+            </p>
+          {% endif %}
+
+          {% if post.content != "" %}
+            <div class="archive__item-excerpt {% unless post.image %}no-image{% endunless %}">
+              {{ post.content | markdownify }}
+            </div>
+          {% endif %}
         </div>
-      {% endif %}
 
-      <div class="research-image">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        {% if post.image %}
+          <div class="research-image">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+          </div>
+        {% endif %}
+
       </div>
-    </div>
-  {% else %}
-    {% if post.content != "" %}
-      <div class="archive__item-excerpt no-image">
-        {{ post.content | markdownify }}
-      </div>
+
     {% endif %}
-  {% endif %}
-
-{% endif %}
 
   </article>
 </div>
