@@ -151,7 +151,7 @@ html {
   margin-right: 0 !important;
 }
 
-/* Publication card */
+/* Publication card: Working Papers */
 .publication-card {
   width: 980px !important;
   max-width: 980px !important;
@@ -261,26 +261,29 @@ html {
 .work-in-progress-list {
   margin-top: 4px;
   margin-bottom: 24px;
+  padding-left: 24px;
 }
 
 .compact__item.custom-archive-item {
   width: 100% !important;
-  max-width: 980px !important;
-  margin-bottom: 9px !important;
+  max-width: 950px !important;
+  margin-bottom: 8px !important;
 }
 
 .compact-paper-item {
   width: 100% !important;
-  max-width: 980px !important;
+  max-width: 950px !important;
   line-height: 1.45;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  font-size: 0.96rem;
 }
 
 .compact-paper-title {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .compact-paper-title a {
+  font-weight: 400;
   text-decoration: underline;
 }
 
@@ -289,6 +292,7 @@ html {
   color: #333;
   display: inline;
   margin: 0;
+  font-weight: 400;
 }
 
 /* Compact Teaching list */
