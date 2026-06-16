@@ -20,7 +20,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Overall spacing */
 .page__content {
   font-size: 0.92em;
 }
@@ -31,7 +30,7 @@ html {
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 55px;
   align-items: start;
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 0 auto 24px auto;
 }
 
@@ -46,7 +45,7 @@ html {
 /* About text */
 .home-about {
   padding-top: 8px;
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .home-about h2 {
@@ -77,16 +76,16 @@ html {
   color: #555;
 }
 
-/* Section styling */
+/* Section layout */
 .section-divider {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 24px auto 20px auto;
   border: none;
   border-top: 1px solid #e5e5e5;
 }
 
 .home-section {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto 30px auto;
   padding-top: 4px;
 }
@@ -105,16 +104,17 @@ html {
 
 .home-section p {
   margin-bottom: 9px;
+  max-width: none !important;
 }
 
-/* CV section */
+/* CV */
 .cv-section p {
   margin-bottom: 0;
 }
 
-/* Research section */
+/* Research */
 .research-section {
-  max-width: 1200px;
+  max-width: 1100px;
 }
 
 .research-category {
@@ -124,27 +124,40 @@ html {
 
 .research-section .list__item {
   clear: both !important;
-  margin-bottom: 26px !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin-bottom: 28px !important;
 }
 
 .research-section .archive__item {
   width: 100% !important;
-  max-width: 1200px !important;
+  max-width: 1100px !important;
   float: none !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .research-section .archive__item-title {
-  white-space: normal;
+  white-space: normal !important;
+  max-width: 1050px !important;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-size: 1.05em;
+}
+
+.research-section .archive__item-title a {
+  white-space: normal !important;
 }
 
 .research-section .archive__item-coauthors,
 .research-section .archive__item-award {
-  white-space: nowrap;
+  white-space: normal !important;
+  max-width: 1050px !important;
+}
+
+.research-section .research-body {
+  width: 100% !important;
+  max-width: 1100px !important;
 }
 
 .research-section .research-body.has-image {
@@ -155,14 +168,13 @@ html {
   margin-top: 6px;
 }
 
-.research-section .archive__item-excerpt {
+.research-section .archive__item-excerpt,
+.research-section .archive__item-excerpt p,
+.research-section .archive__item p {
+  width: 100% !important;
+  max-width: none !important;
   line-height: 1.45;
-  max-width: 1000px !important;
   margin-top: 5px;
-}
-
-.research-section .archive__item-excerpt.no-image {
-  max-width: 1150px !important;
 }
 
 .research-section .research-image {
@@ -178,34 +190,40 @@ html {
   display: block;
 }
 
-/* Teaching section */
+/* Teaching */
 .teaching-section {
-  max-width: 1200px;
+  max-width: 1100px;
 }
 
 .teaching-section .list__item {
   clear: both !important;
-  margin-bottom: 22px !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin-bottom: 24px !important;
 }
 
 .teaching-section .archive__item {
   width: 100% !important;
-  max-width: 1200px !important;
+  max-width: 1100px !important;
   float: none !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .teaching-section .archive__item-title {
-  white-space: normal;
+  white-space: normal !important;
+  max-width: 1050px !important;
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 1.05em;
 }
 
-.teaching-section .archive__item-excerpt {
+.teaching-section .archive__item-excerpt,
+.teaching-section .archive__item-excerpt p,
+.teaching-section .archive__item p {
+  width: 100% !important;
+  max-width: none !important;
   line-height: 1.45;
-  max-width: 1100px !important;
   margin-top: 5px;
 }
 
@@ -234,11 +252,6 @@ html {
 }
 
 @media screen and (max-width: 900px) {
-  .research-section .archive__item-coauthors,
-  .research-section .archive__item-award {
-    white-space: normal;
-  }
-
   .research-section .research-body.has-image {
     display: block !important;
   }
@@ -252,6 +265,26 @@ html {
     max-width: 210px;
   }
 }
+
+/* Strong override for publication/teaching excerpts */
+.home-section .archive__item,
+.home-section .archive__item-excerpt,
+.home-section .archive__item-excerpt p,
+.home-section .archive__item p {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.home-section .archive__item-title {
+  max-width: 100% !important;
+}
+
+.home-section .research-body,
+.home-section .research-body.has-image {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 </style>
 
 <div class="home-intro">
@@ -332,14 +365,14 @@ html {
   <h3 class="research-category">Working Papers</h3>
 
 {% assign working_papers = site.publications | where: "category", "working_papers" %}
-{% for post in working_papers %}
+{% for post in working_papers reversed %}
 {% include archive-single.html %}
 {% endfor %}
 
   <h3 class="research-category">Work in Progress</h3>
 
 {% assign work_in_progress = site.publications | where: "category", "work_in_progress" %}
-{% for post in work_in_progress %}
+{% for post in work_in_progress reversed %}
 {% include archive-single.html %}
 {% endfor %}
 
