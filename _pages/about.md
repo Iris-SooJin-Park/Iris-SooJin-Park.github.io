@@ -7,14 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-
 <style>
 .page,
 .page__inner-wrap,
 .page__content,
 .archive {
   width: 100% !important;
-  max-width: 1220px !important;
+  max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   float: none !important;
@@ -25,29 +24,29 @@ html {
 }
 
 .page__content {
-  font-size: 0.93em;
+  font-size: 0.92em;
 }
 
-/* Intro layout */
+/* Intro */
 .home-intro {
   display: grid;
-  grid-template-columns: 255px minmax(0, 1fr);
-  gap: 52px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 50px;
   align-items: start;
-  max-width: 1020px;
-  margin: 0 auto 34px auto;
+  max-width: 980px;
+  margin: 0 auto 32px auto;
 }
 
 .home-photo img {
   width: 100%;
-  max-width: 240px;
+  max-width: 235px;
   height: auto;
   display: block;
 }
 
 .home-about {
   padding-top: 6px;
-  max-width: 720px;
+  max-width: 700px;
 }
 
 .home-about h2 {
@@ -84,17 +83,17 @@ html {
   color: #555;
 }
 
-/* Section layout */
+/* Sections */
 .section-divider {
-  max-width: 1020px;
+  max-width: 980px;
   margin: 28px auto 24px auto;
   border: none;
   border-top: 1px solid #e6e6e6;
 }
 
 .home-section {
-  width: 100% !important;
-  max-width: 1020px !important;
+  width: 980px !important;
+  max-width: 980px !important;
   margin: 0 auto 42px auto;
   padding-top: 4px;
 }
@@ -126,10 +125,10 @@ html {
   margin-bottom: 0;
 }
 
-/* Research section */
+/* Research */
 .research-section {
-  width: 100% !important;
-  max-width: 1020px !important;
+  width: 980px !important;
+  max-width: 980px !important;
 }
 
 .research-category {
@@ -140,19 +139,13 @@ html {
   color: #444;
 }
 
-/* Publication item wrapper */
 .research-section .list__item,
-.research-section .custom-archive-item {
-  clear: both !important;
-  width: 100% !important;
-  max-width: 1020px !important;
-  margin-bottom: 0 !important;
-}
-
+.research-section .custom-archive-item,
 .research-section .archive__item,
 .research-section .custom-archive-article {
-  width: 100% !important;
-  max-width: 1020px !important;
+  width: 980px !important;
+  max-width: 980px !important;
+  clear: both !important;
   float: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -160,29 +153,30 @@ html {
 
 /* Publication card */
 .publication-card {
-  width: 100% !important;
-  max-width: 1020px !important;
+  width: 980px !important;
+  max-width: 980px !important;
   padding: 20px 0 24px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
 .publication-card.has-image {
   display: grid !important;
-  grid-template-columns: minmax(0, 730px) 230px;
-  gap: 36px;
-  align-items: stretch;
+  grid-template-columns: 700px 190px !important;
+  gap: 36px !important;
+  align-items: start !important;
 }
 
 .publication-text {
-  width: 100% !important;
-  max-width: 730px !important;
+  width: 700px !important;
+  max-width: 700px !important;
 }
 
-/* Title */
+/* Paper title */
 .research-section .archive__item-title,
 .research-section .archive__item-title a {
+  width: 700px !important;
+  max-width: 700px !important;
   white-space: normal !important;
-  max-width: 730px !important;
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 1.04rem !important;
@@ -192,8 +186,8 @@ html {
 /* Coauthors / abstract line */
 .publication-abstract,
 .publication-abstract p {
-  width: 100% !important;
-  max-width: 730px !important;
+  width: 700px !important;
+  max-width: 700px !important;
   white-space: normal !important;
   line-height: 1.45;
   margin-top: 4px;
@@ -202,14 +196,16 @@ html {
 
 /* Links */
 .publication-links {
-  width: 100% !important;
-  max-width: 730px !important;
+  width: 700px !important;
+  max-width: 700px !important;
   margin-top: 6px;
   margin-bottom: 10px;
 }
 
 /* Award */
 .research-section .archive__item-award {
+  width: 700px !important;
+  max-width: 700px !important;
   margin-top: 6px;
   margin-bottom: 10px;
   color: #000;
@@ -217,16 +213,17 @@ html {
   line-height: 1.35;
 }
 
-/* Abstract/body */
+/* Body */
 .research-section .archive__item-excerpt,
 .research-section .archive__item-excerpt p {
-  width: 100% !important;
-  max-width: 730px !important;
+  width: 700px !important;
+  max-width: 700px !important;
   line-height: 1.48;
   margin-top: 6px;
 }
 
-/* No-image papers can use full width */
+/* No-image papers use full width */
+.publication-card:not(.has-image),
 .publication-card:not(.has-image) .publication-text,
 .publication-card:not(.has-image) .archive__item-title,
 .publication-card:not(.has-image) .archive__item-title a,
@@ -235,26 +232,25 @@ html {
 .publication-card:not(.has-image) .publication-links,
 .publication-card:not(.has-image) .archive__item-excerpt,
 .publication-card:not(.has-image) .archive__item-excerpt p {
+  width: 980px !important;
   max-width: 980px !important;
 }
 
-/* Research image: starts at title and spans the card height */
+/* Image starts at title level, but stays modest */
 .research-image {
-  width: 230px !important;
-  max-width: 230px !important;
-  height: 100% !important;
-  align-self: stretch !important;
+  width: 190px !important;
+  max-width: 190px !important;
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: center;
-  padding-top: 0;
+  padding-top: 2px;
 }
 
 .research-image img {
-  width: 100% !important;
-  max-width: 230px !important;
-  height: 100% !important;
-  max-height: 280px !important;
+  width: 190px !important;
+  max-width: 190px !important;
+  height: auto !important;
+  max-height: 190px !important;
   object-fit: contain;
   display: block;
   border: 1px solid #eeeeee;
@@ -263,32 +259,32 @@ html {
 
 /* Teaching */
 .teaching-section {
-  width: 100% !important;
-  max-width: 1020px !important;
+  width: 980px !important;
+  max-width: 980px !important;
 }
 
 .teaching-section .list__item,
-.teaching-section .custom-archive-item {
+.teaching-section .custom-archive-item,
+.teaching-section .archive__item,
+.teaching-section .custom-archive-article {
+  width: 980px !important;
+  max-width: 980px !important;
   clear: both !important;
-  width: 100% !important;
-  max-width: 1020px !important;
-  margin-bottom: 0 !important;
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .teaching-section .archive__item,
 .teaching-section .custom-archive-article {
-  width: 100% !important;
-  max-width: 1020px !important;
-  float: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
   padding: 14px 0 16px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
 .teaching-section .archive__item-title {
-  white-space: normal !important;
+  width: 980px !important;
   max-width: 980px !important;
+  white-space: normal !important;
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 1.02rem !important;
@@ -296,7 +292,7 @@ html {
 }
 
 .teaching-meta {
-  width: 100% !important;
+  width: 980px !important;
   max-width: 980px !important;
   white-space: normal !important;
   line-height: 1.45;
@@ -312,7 +308,10 @@ html {
   .archive,
   .home-section,
   .research-section,
-  .teaching-section {
+  .teaching-section,
+  .publication-card,
+  .publication-text {
+    width: 100% !important;
     max-width: 100% !important;
   }
 
@@ -337,14 +336,15 @@ html {
     display: block !important;
   }
 
-  .publication-text,
+  .research-section .archive__item-title,
+  .research-section .archive__item-title a,
   .publication-abstract,
   .publication-abstract p,
   .publication-links,
-  .research-section .archive__item-title,
-  .research-section .archive__item-title a,
+  .research-section .archive__item-award,
   .research-section .archive__item-excerpt,
   .research-section .archive__item-excerpt p {
+    width: 100% !important;
     max-width: 100% !important;
   }
 
@@ -352,13 +352,12 @@ html {
     margin-top: 14px;
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
     justify-content: center;
   }
 
   .research-image img {
-    width: 220px !important;
-    max-width: 220px !important;
+    width: 210px !important;
+    max-width: 210px !important;
     height: auto !important;
     max-height: none !important;
   }
