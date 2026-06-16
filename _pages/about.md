@@ -1,13 +1,10 @@
 ---
-
 permalink: /
 title: "Iris SooJin Park"
 author_profile: false
 redirect_from:
-
-* /about/
-* /about.html
-
+  - /about/
+  - /about.html
 ---
 
 <style>
@@ -262,7 +259,6 @@ html {
   <div class="home-about">
     <h2>A little about me</h2>
 
-```
 <p>
   I am a PhD candidate in the 
   <a href="https://business.wisc.edu/faculty-research/risk-insurance/">
@@ -304,7 +300,6 @@ html {
     </p>
   {% endif %}
 </div>
-```
 
   </div>
 
