@@ -7,6 +7,7 @@ redirect_from:
   - /about.html
 ---
 
+
 <style>
 .page,
 .page__inner-wrap {
@@ -55,6 +56,12 @@ html {
 
 .home-about p {
   margin-bottom: 11px;
+}
+
+.job-market-note {
+  font-size: 1.02em;
+  margin-bottom: 12px !important;
+  color: #000;
 }
 
 /* Contact links */
@@ -122,14 +129,16 @@ html {
   margin-bottom: 14px !important;
 }
 
-.research-section .list__item {
+.research-section .list__item,
+.research-section .custom-archive-item {
   clear: both !important;
   width: 100% !important;
   max-width: 1100px !important;
   margin-bottom: 28px !important;
 }
 
-.research-section .archive__item {
+.research-section .archive__item,
+.research-section .custom-archive-article {
   width: 100% !important;
   max-width: 1100px !important;
   float: none !important;
@@ -139,7 +148,7 @@ html {
 
 .research-section .archive__item-title {
   white-space: normal !important;
-  max-width: 1050px !important;
+  max-width: 1100px !important;
   margin-top: 0;
   margin-bottom: 6px;
   font-size: 1.05em;
@@ -152,7 +161,25 @@ html {
 .research-section .archive__item-coauthors,
 .research-section .archive__item-award {
   white-space: normal !important;
-  max-width: 1050px !important;
+  max-width: 1100px !important;
+}
+
+.publication-abstract,
+.publication-abstract p,
+.publication-links {
+  width: 100% !important;
+  max-width: 1100px !important;
+  white-space: normal !important;
+  line-height: 1.45;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.research-section .archive__item-award {
+  margin-top: 6px;
+  margin-bottom: 8px;
+  color: #000;
+  white-space: normal !important;
 }
 
 .research-section .research-body {
@@ -172,7 +199,7 @@ html {
 .research-section .archive__item-excerpt p,
 .research-section .archive__item p {
   width: 100% !important;
-  max-width: none !important;
+  max-width: 1100px !important;
   line-height: 1.45;
   margin-top: 5px;
 }
@@ -195,14 +222,16 @@ html {
   max-width: 1100px;
 }
 
-.teaching-section .list__item {
+.teaching-section .list__item,
+.teaching-section .custom-archive-item {
   clear: both !important;
   width: 100% !important;
   max-width: 1100px !important;
   margin-bottom: 24px !important;
 }
 
-.teaching-section .archive__item {
+.teaching-section .archive__item,
+.teaching-section .custom-archive-article {
   width: 100% !important;
   max-width: 1100px !important;
   float: none !important;
@@ -212,19 +241,55 @@ html {
 
 .teaching-section .archive__item-title {
   white-space: normal !important;
-  max-width: 1050px !important;
+  max-width: 1100px !important;
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 1.05em;
+}
+
+.teaching-meta {
+  width: 100% !important;
+  max-width: 1100px !important;
+  white-space: normal !important;
+  line-height: 1.45;
+  margin-top: 5px;
+  margin-bottom: 8px;
 }
 
 .teaching-section .archive__item-excerpt,
 .teaching-section .archive__item-excerpt p,
 .teaching-section .archive__item p {
   width: 100% !important;
-  max-width: none !important;
+  max-width: 1100px !important;
   line-height: 1.45;
   margin-top: 5px;
+}
+
+/* Very strong homepage archive overrides */
+.home-section .archive__item,
+.home-section .custom-archive-article,
+.home-section .archive__item-excerpt,
+.home-section .archive__item-excerpt p,
+.home-section .archive__item p,
+.home-section .publication-abstract,
+.home-section .publication-abstract p,
+.home-section .publication-links,
+.home-section .teaching-meta {
+  width: 100% !important;
+  max-width: 1100px !important;
+  white-space: normal !important;
+}
+
+.home-section .archive__item-title,
+.home-section .archive__item-title a {
+  max-width: 1100px !important;
+  white-space: normal !important;
+}
+
+.home-section .research-body,
+.home-section .research-body.has-image {
+  width: 100% !important;
+  max-width: 1100px !important;
 }
 
 /* Mobile */
@@ -265,26 +330,6 @@ html {
     max-width: 210px;
   }
 }
-
-/* Strong override for publication/teaching excerpts */
-.home-section .archive__item,
-.home-section .archive__item-excerpt,
-.home-section .archive__item-excerpt p,
-.home-section .archive__item p {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.home-section .archive__item-title {
-  max-width: 100% !important;
-}
-
-.home-section .research-body,
-.home-section .research-body.has-image {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
 </style>
 
 <div class="home-intro">
@@ -299,6 +344,10 @@ html {
 
   <div class="home-about">
     <h2>A little about me</h2>
+
+<p class="job-market-note">
+  <strong>I am currently on the 2026–2027 academic job market.</strong>
+</p>
 
 <p>
   I am a PhD candidate in the 
