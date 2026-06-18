@@ -479,8 +479,8 @@ html {
 
   .research-section .archive__item-excerpt,
   .research-section .archive__item-excerpt p {
-    font-size: 0.76rem !important;
-    line-height: 1.36 !important;
+    font-size: 0.72rem !important;
+    line-height: 1.32 !important;
   }
 
   .research-image,
