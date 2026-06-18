@@ -346,8 +346,8 @@ html {
     max-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
     box-sizing: border-box !important;
   }
 
@@ -355,16 +355,16 @@ html {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 0 28px 0 !important;
+    margin: 0 0 26px 0 !important;
   }
 
   .home-photo {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .home-photo img {
     width: 100% !important;
-    max-width: 230px !important;
+    max-width: 220px !important;
     height: auto !important;
   }
 
@@ -380,17 +380,30 @@ html {
     max-width: 100% !important;
   }
 
+  .home-about p {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .job-market-note {
+    font-size: 0.94rem !important;
+    line-height: 1.4;
+  }
+
   .home-links {
-    gap: 12px;
+    gap: 10px;
+    font-size: 0.88rem;
   }
 
   .home-section h2 {
-    font-size: 1.25em;
+    font-size: 1.22em;
+    margin-bottom: 14px;
   }
 
   .research-category {
-    font-size: 1.02em;
-    margin-top: 20px !important;
+    font-size: 1rem;
+    margin-top: 18px !important;
+    margin-bottom: 12px !important;
   }
 
   .research-section .list__item,
@@ -411,7 +424,7 @@ html {
   }
 
   .publication-card {
-    padding: 18px 0 22px 0;
+    padding: 16px 0 20px 0;
   }
 
   .publication-card.has-image {
@@ -444,38 +457,39 @@ html {
 
   .research-section .archive__item-title,
   .research-section .archive__item-title a {
-    font-size: 1rem !important;
-    line-height: 1.3 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .publication-abstract,
+  .publication-abstract p {
+    font-size: 0.88rem !important;
+    line-height: 1.38 !important;
   }
 
   .publication-links {
-    font-size: 0.95rem;
+    font-size: 0.9rem !important;
+    line-height: 1.35;
+  }
+
+  .research-section .archive__item-award {
+    font-size: 0.88rem !important;
+    line-height: 1.35 !important;
   }
 
   .research-section .archive__item-excerpt,
   .research-section .archive__item-excerpt p {
-    font-size: 0.92rem;
-    line-height: 1.5;
+    font-size: 0.82rem !important;
+    line-height: 1.42 !important;
   }
 
-  .research-image {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-top: 14px !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
-
+  .research-image,
   .research-image img {
-    width: 75% !important;
-    max-width: 260px !important;
-    height: auto !important;
-    max-height: none !important;
-    object-fit: contain !important;
+    display: none !important;
   }
 
   .work-in-progress-list {
-    padding-left: 14px !important;
+    padding-left: 10px !important;
     padding-right: 0 !important;
   }
 
@@ -489,20 +503,20 @@ html {
   }
 
   .compact-paper-item {
-    font-size: 0.93rem;
-    line-height: 1.45;
+    font-size: 0.88rem !important;
+    line-height: 1.38;
   }
 
   .compact-teaching-title {
-    font-size: 0.98rem;
+    font-size: 0.92rem !important;
   }
 
   .compact-teaching-meta {
-    font-size: 0.92rem;
+    font-size: 0.86rem !important;
   }
 
   .home-section {
-    margin-bottom: 32px !important;
+    margin-bottom: 30px !important;
   }
 }
 </style>
