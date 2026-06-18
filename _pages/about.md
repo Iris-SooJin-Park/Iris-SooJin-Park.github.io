@@ -549,8 +549,7 @@ html {
 
 <p>
   My interests include the study of health insurance, household financial 
-  decision-making under risk, and behavioral responses to insurance design, 
-  incentives, and information.
+  decision-making under risk, and behavioral responses to insurance design and information.
 </p>
 
 <p>
