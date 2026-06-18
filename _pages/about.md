@@ -346,8 +346,8 @@ html {
     max-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
     box-sizing: border-box !important;
   }
 
@@ -381,27 +381,27 @@ html {
   }
 
   .home-about p {
-    font-size: 0.92rem;
-    line-height: 1.45;
+    font-size: 0.9rem;
+    line-height: 1.42;
   }
 
   .job-market-note {
-    font-size: 0.94rem !important;
-    line-height: 1.4;
+    font-size: 0.92rem !important;
+    line-height: 1.35;
   }
 
   .home-links {
     gap: 10px;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
   }
 
   .home-section h2 {
-    font-size: 1.22em;
-    margin-bottom: 14px;
+    font-size: 1.18em;
+    margin-bottom: 13px;
   }
 
   .research-category {
-    font-size: 1rem;
+    font-size: 0.98em;
     margin-top: 18px !important;
     margin-bottom: 12px !important;
   }
@@ -424,7 +424,7 @@ html {
   }
 
   .publication-card {
-    padding: 16px 0 20px 0;
+    padding: 14px 0 18px 0;
   }
 
   .publication-card.has-image {
@@ -457,30 +457,30 @@ html {
 
   .research-section .archive__item-title,
   .research-section .archive__item-title a {
-    font-size: 0.98rem !important;
-    line-height: 1.28 !important;
+    font-size: 0.96rem !important;
+    line-height: 1.25 !important;
   }
 
   .publication-abstract,
   .publication-abstract p {
-    font-size: 0.88rem !important;
-    line-height: 1.38 !important;
+    font-size: 0.82rem !important;
+    line-height: 1.32 !important;
   }
 
   .publication-links {
-    font-size: 0.9rem !important;
-    line-height: 1.35;
+    font-size: 0.84rem !important;
+    line-height: 1.3;
   }
 
   .research-section .archive__item-award {
-    font-size: 0.88rem !important;
-    line-height: 1.35 !important;
+    font-size: 0.8rem !important;
+    line-height: 1.28 !important;
   }
 
   .research-section .archive__item-excerpt,
   .research-section .archive__item-excerpt p {
-    font-size: 0.82rem !important;
-    line-height: 1.42 !important;
+    font-size: 0.76rem !important;
+    line-height: 1.36 !important;
   }
 
   .research-image,
@@ -489,7 +489,7 @@ html {
   }
 
   .work-in-progress-list {
-    padding-left: 10px !important;
+    padding-left: 8px !important;
     padding-right: 0 !important;
   }
 
@@ -503,20 +503,20 @@ html {
   }
 
   .compact-paper-item {
-    font-size: 0.88rem !important;
-    line-height: 1.38;
+    font-size: 0.84rem !important;
+    line-height: 1.34;
   }
 
   .compact-teaching-title {
-    font-size: 0.92rem !important;
+    font-size: 0.9rem !important;
   }
 
   .compact-teaching-meta {
-    font-size: 0.86rem !important;
+    font-size: 0.84rem !important;
   }
 
   .home-section {
-    margin-bottom: 30px !important;
+    margin-bottom: 28px !important;
   }
 }
 </style>
