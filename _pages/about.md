@@ -328,8 +328,12 @@ html {
   color: #333;
 }
 
-/* Mobile */
 @media screen and (max-width: 900px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
   .page,
   .page__inner-wrap,
   .page__content,
@@ -337,15 +341,21 @@ html {
   .home-section,
   .research-section,
   .teaching-section,
-  .publication-card,
-  .publication-text {
+  .section-divider {
     width: 100% !important;
     max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    box-sizing: border-box !important;
   }
 
   .home-intro {
-    display: block;
-    max-width: 100%;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 28px 0 !important;
   }
 
   .home-photo {
@@ -353,15 +363,61 @@ html {
   }
 
   .home-photo img {
-    max-width: 230px;
+    width: 100% !important;
+    max-width: 230px !important;
+    height: auto !important;
   }
 
   .home-about {
+    width: 100% !important;
+    max-width: 100% !important;
     padding-top: 0;
+  }
+
+  .home-about p,
+  .home-section p {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .home-links {
+    gap: 12px;
+  }
+
+  .home-section h2 {
+    font-size: 1.25em;
+  }
+
+  .research-category {
+    font-size: 1.02em;
+    margin-top: 20px !important;
+  }
+
+  .research-section .list__item,
+  .research-section .custom-archive-item,
+  .research-section .archive__item,
+  .research-section .custom-archive-article,
+  .publication-card,
+  .publication-text,
+  .teaching-section .list__item,
+  .teaching-section .custom-archive-item,
+  .teaching-section .archive__item,
+  .teaching-section .custom-archive-article {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .publication-card {
+    padding: 18px 0 22px 0;
   }
 
   .publication-card.has-image {
     display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .research-section .archive__item-title,
@@ -371,27 +427,82 @@ html {
   .publication-links,
   .research-section .archive__item-award,
   .research-section .archive__item-excerpt,
-  .research-section .archive__item-excerpt p {
+  .research-section .archive__item-excerpt p,
+  .publication-card:not(.has-image),
+  .publication-card:not(.has-image) .publication-text,
+  .publication-card:not(.has-image) .archive__item-title,
+  .publication-card:not(.has-image) .archive__item-title a,
+  .publication-card:not(.has-image) .publication-abstract,
+  .publication-card:not(.has-image) .publication-abstract p,
+  .publication-card:not(.has-image) .publication-links,
+  .publication-card:not(.has-image) .archive__item-excerpt,
+  .publication-card:not(.has-image) .archive__item-excerpt p {
     width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .research-section .archive__item-title,
+  .research-section .archive__item-title a {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .publication-links {
+    font-size: 0.95rem;
+  }
+
+  .research-section .archive__item-excerpt,
+  .research-section .archive__item-excerpt p {
+    font-size: 0.92rem;
+    line-height: 1.5;
   }
 
   .research-image {
-    margin-top: 14px;
     width: 100% !important;
     max-width: 100% !important;
-    justify-content: center;
+    margin-top: 14px !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .research-image img {
-    width: 210px !important;
-    max-width: 210px !important;
+    width: 75% !important;
+    max-width: 260px !important;
     height: auto !important;
     max-height: none !important;
+    object-fit: contain !important;
+  }
+
+  .work-in-progress-list {
+    padding-left: 14px !important;
+    padding-right: 0 !important;
+  }
+
+  .compact__item.custom-archive-item,
+  .compact-paper-item,
+  .teaching_compact__item.custom-archive-item,
+  .compact-teaching-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .compact-paper-item {
+    font-size: 0.93rem;
+    line-height: 1.45;
+  }
+
+  .compact-teaching-title {
+    font-size: 0.98rem;
+  }
+
+  .compact-teaching-meta {
+    font-size: 0.92rem;
   }
 
   .home-section {
-    margin-bottom: 32px;
+    margin-bottom: 32px !important;
   }
 }
 </style>
