@@ -590,7 +590,7 @@ html {
 
   <p>
     You can download my CV 
-    <a href="/files/Iris_SooJin_Park_CV(recent).pdf" target="_blank">here</a>.
+    <a href="/files/Iris_SooJin_Park_CV.pdf" target="_blank">here</a>.
   </p>
 </section>
 
