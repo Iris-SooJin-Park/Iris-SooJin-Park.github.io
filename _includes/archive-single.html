@@ -104,6 +104,12 @@
               </div>
             {% endif %}
 
+            {% if post.award %}
+              <p class="archive__item-award">
+                🏆 <strong>{{ post.award }}</strong>
+              </p>
+            {% endif %}
+
             {% if post.paperurl or post.ssrnurl or post.slidesurl %}
               <p class="publication-links">
                 {% assign sep = "" %}
@@ -121,12 +127,6 @@
                 {% if post.slidesurl %}
                   {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
                 {% endif %}
-              </p>
-            {% endif %}
-
-            {% if post.award %}
-              <p class="archive__item-award">
-                🏆 <strong>{{ post.award }}</strong>
               </p>
             {% endif %}
 
