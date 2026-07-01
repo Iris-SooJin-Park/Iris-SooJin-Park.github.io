@@ -83,6 +83,17 @@ html {
   color: #555;
 }
 
+/* CV link */
+.cv-link {
+  margin-top: 16px;
+  font-size: 1.02em;
+  font-weight: 600;
+}
+
+.cv-link a {
+  text-decoration: underline;
+}
+
 /* Sections */
 .section-divider {
   max-width: 980px;
@@ -114,15 +125,6 @@ html {
 .home-section p {
   margin-bottom: 10px;
   max-width: none !important;
-}
-
-/* CV */
-.cv-section {
-  margin-bottom: 36px;
-}
-
-.cv-section p {
-  margin-bottom: 0;
 }
 
 /* Research */
@@ -395,6 +397,11 @@ html {
     font-size: 0.86rem;
   }
 
+  .cv-link {
+    font-size: 0.92rem !important;
+    line-height: 1.35;
+  }
+
   .home-section h2 {
     font-size: 1.18em;
     margin-bottom: 13px;
@@ -578,20 +585,15 @@ html {
   {% endif %}
 </div>
 
+<p class="cv-link">
+  <a href="/files/Iris_SooJin_Park_CV.pdf" target="_blank">Download CV</a>
+</p>
+
   </div>
 
 </div>
 
 <hr class="section-divider">
-
-<section id="cv" class="home-section cv-section">
-  <h2>CV</h2>
-
-  <p>
-    You can download my CV 
-    <a href="/files/Iris_SooJin_Park_CV.pdf" target="_blank">here</a>.
-  </p>
-</section>
 
 <section id="research" class="home-section research-section">
   <h2>Research</h2>
