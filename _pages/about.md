@@ -584,7 +584,7 @@ html {
       <i class="fab fa-fw fa-linkedin"></i>
       <a href="https://www.linkedin.com/in/{{ site.author.linkedin | replace: '/', '' }}">
         LinkedIn
-      </a>
+      </a> 
     </p>
   {% endif %}
 </div>
