@@ -2,10 +2,8 @@
 title: "Consulting Project Capstone"
 collection: teaching
 position: "Teaching Assistant"
-type: "MSBA Course (2026 Spring)"
-#permalink: /teaching/2014-spring-teaching-1
+type: "MSBA Course, Spring 2026"
 venue: "University of Wisconsin-Madison"
-#date: 2014-01-01
 location: "Madison, WI"
 ---
 

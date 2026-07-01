@@ -2,10 +2,8 @@
 title: "Experiments and Causal Methods for Business Insights"
 collection: teaching
 position: "Teaching Assistant"
-type: "MSBA Course (2025 Fall)"
-#permalink: /teaching/2014-spring-teaching-1
+type: "MSBA Course, Fall 2025"
 venue: "University of Wisconsin-Madison"
-#date: 2014-01-01
 location: "Madison, WI"
 ---
 

@@ -33,13 +33,29 @@
 
     <div class="compact-teaching-item">
       <div class="compact-teaching-title">{{ title }}</div>
+
       <div class="compact-teaching-meta">
-        {{ post.type }}
+        {% if post.position %}
+          {{ post.position }}
+        {% endif %}
+
+        {% if post.position and post.type %}
+          ·
+        {% endif %}
+
+        {% if post.type %}
+          {{ post.type }}
+        {% endif %}
+
         {% if post.date %}
           , {{ post.date | date: "%Y" }}
         {% endif %}
+
         <br>
-        <em>{{ post.venue }}</em>
+
+        {% if post.venue %}
+          <em>{{ post.venue }}</em>
+        {% endif %}
       </div>
     </div>
 
@@ -52,10 +68,26 @@
         <h2 class="archive__item-title" itemprop="headline">{{ title }}</h2>
 
         <p class="teaching-meta">
-          {{ post.type }}<br>
-          <i>{{ post.venue }}</i>
+          {% if post.position %}
+            {{ post.position }}
+          {% endif %}
+
+          {% if post.position and post.type %}
+            ·
+          {% endif %}
+
+          {% if post.type %}
+            {{ post.type }}
+          {% endif %}
+
           {% if post.date %}
             , {{ post.date | date: "%Y" }}
+          {% endif %}
+
+          <br>
+
+          {% if post.venue %}
+            <i>{{ post.venue }}</i>
           {% endif %}
         </p>
 
@@ -75,14 +107,17 @@
             {% if post.paperurl or post.ssrnurl or post.slidesurl %}
               <p class="publication-links">
                 {% assign sep = "" %}
+
                 {% if post.paperurl %}
                   <a href="{{ post.paperurl }}">Download Paper</a>
                   {% assign sep = " | " %}
                 {% endif %}
+
                 {% if post.ssrnurl %}
                   {{ sep }}<a href="{{ post.ssrnurl }}">SSRN</a>
                   {% assign sep = " | " %}
                 {% endif %}
+
                 {% if post.slidesurl %}
                   {{ sep }}<a href="{{ post.slidesurl }}">Download Slides</a>
                 {% endif %}
