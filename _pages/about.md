@@ -64,9 +64,21 @@ html {
   color: #000;
 }
 
+/* CV link */
+.cv-link {
+  margin-top: 16px;
+  margin-bottom: 12px !important;
+  font-size: 0.96em;
+  font-weight: 400;
+}
+
+.cv-link a {
+  text-decoration: underline;
+}
+
 /* Contact links */
 .home-links {
-  margin-top: 15px;
+  margin-top: 12px;
   font-size: 0.92em;
   display: flex;
   gap: 18px;
@@ -81,17 +93,6 @@ html {
 .home-links i {
   margin-right: 5px;
   color: #555;
-}
-
-/* CV link */
-.cv-link {
-  margin-top: 16px;
-  font-size: 1.02em;
-  font-weight: 600;
-}
-
-.cv-link a {
-  text-decoration: underline;
 }
 
 /* Sections */
@@ -392,14 +393,14 @@ html {
     line-height: 1.35;
   }
 
+  .cv-link {
+    font-size: 0.9rem !important;
+    line-height: 1.35;
+  }
+
   .home-links {
     gap: 10px;
     font-size: 0.86rem;
-  }
-
-  .cv-link {
-    font-size: 0.92rem !important;
-    line-height: 1.35;
   }
 
   .home-section h2 {
@@ -564,10 +565,13 @@ html {
   in May 2021, graduating with distinction.
 </p>
 
+<p class="cv-link">
+  Here is a link to my 
+  <a href="/files/Iris_SooJin_Park_CV.pdf" target="_blank">CV</a>.
+</p>
+
 <!-- Contact -->
 <div class="home-links">
-  <p><i class="fa fa-fw fa-university"></i> UW-Madison</p>
-
   {% if site.author.email %}
     <p>
       <i class="fa fa-fw fa-envelope"></i>
@@ -584,10 +588,6 @@ html {
     </p>
   {% endif %}
 </div>
-
-<p class="cv-link">
-  <a href="/files/Iris_SooJin_Park_CV.pdf" target="_blank">Download CV</a>
-</p>
 
   </div>
 
