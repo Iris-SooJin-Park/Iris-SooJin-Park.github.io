@@ -593,7 +593,7 @@ html {
 
 </div>
 
-<hr class="section-divider">
+<div class="intro-spacer"></div>
 
 <section id="research" class="home-section research-section">
   <h2>Research</h2>
