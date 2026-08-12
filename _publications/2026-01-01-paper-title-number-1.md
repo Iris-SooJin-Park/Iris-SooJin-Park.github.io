@@ -2,7 +2,7 @@
 title: "Myopia, Price Perception, and Moral Hazard in Health Insurance"
 collection: publications
 category: working_papers
-image: /images/FigD_daily_pctile_4linesWI_dist-1.png
+image: /images/Model_fit_smoothed_empirical_through_p99%20(1).png
 #permalink: /publication/2009-10-01-paper-title-number-1
 #excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 #date: 2009-10-01
