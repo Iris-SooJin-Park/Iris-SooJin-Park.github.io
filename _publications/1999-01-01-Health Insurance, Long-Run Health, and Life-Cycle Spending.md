@@ -1,5 +1,5 @@
 ---
-title: "Endogenous Spending and Labor Supply Response to Health Shocks"
+title: "Health Insurance, Long-Run Health, and Life-Cycle Spending"
 collection: publications
 category: work_in_progress
 no_link: true
